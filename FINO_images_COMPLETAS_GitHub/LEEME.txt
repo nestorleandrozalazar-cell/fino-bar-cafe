@@ -1,8 +1,0 @@
-Carpeta preparada para GitHub Pages.
-
-Todas las imágenes originales fueron adaptadas a formatos web compatibles.
-- Los archivos .NEF fueron convertidos a .jpg usando su vista previa JPEG de alta resolución.
-- El archivo .HEIC fue convertido a .jpg.
-- JPG/JPEG/PNG fueron redimensionados y optimizados para web.
-
-Subí la carpeta 'images' completa junto a tu index.html.
