@@ -1,92 +1,922 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FINO | Un lugar para encontrarse</title>
-<style>
-*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#0f0f0f;color:#f5f3ee;line-height:1.7}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('fino web/Screenshot 2026-06-11 at 17.33.52.png') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
-h1{font-size:72px;color:#d95a1a;margin:0} h2{font-size:42px;color:#d95a1a}
-section{max-width:1200px;margin:auto;padding:80px 24px}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.story img{width:100%;border-radius:18px;object-fit:cover}
-.btn{background:#d95a1a;color:#fff;padding:14px 24px;border-radius:10px;text-decoration:none}
-footer{background:#000;padding:40px;text-align:center}
-@media(max-width:800px){.story{grid-template-columns:1fr} h1{font-size:48px} h2{font-size:32px}}
-</style></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FINO | Un lugar de encuentro</title>
+
+  <meta
+    name="description"
+    content="FINO Bar Café en Córdoba Capital. Gastronomía, coctelería, encuentros, eventos y experiencias."
+  >
+
+  <style>
+
+    :root {
+      --black: #080808;
+      --graphite: #111111;
+      --orange: #d95a1a;
+      --cream: #f5f1e8;
+      --muted: #b9b1a7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* =========================
+       MENU
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      padding: 22px 6%;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .90),
+        rgba(0, 0, 0, .15)
+      );
+
+      backdrop-filter: blur(7px);
+    }
+
+    nav a {
+      margin-left: 28px;
+      font-size: 13px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: #eee;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+
+    /* =========================
+       PORTADA
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, .82),
+          rgba(0, 0, 0, .48),
+          rgba(0, 0, 0, .42)
+        ),
+        url("images/ChatGPT Image Aug 10, 2026 at 10_14_58 PM.png");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+
+      padding: 120px 7% 70px;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .location {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: .20em;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .hero-logo {
+      width: min(560px, 85vw);
+      margin-bottom: 20px;
+    }
+
+    .hero-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero h1 {
+      display: none;
+    }
+
+    .hero h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 em {
+      color: var(--orange);
+      font-style: italic;
+    }
+
+    .hero-text {
+      font-size: 19px;
+      max-width: 580px;
+      color: #e3ddd4;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+
+      padding: 14px 25px;
+
+      border-radius: 999px;
+
+      font-weight: bold;
+
+      transition: .25s;
+
+      box-shadow: 0 0 28px rgba(217, 90, 26, .20);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(217, 90, 26, .40);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .45);
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 105px 7%;
+    }
+
+    .dark {
+      max-width: none;
+      background: #000;
+      border-top: 1px solid rgba(217, 90, 26, .15);
+      border-bottom: 1px solid rgba(217, 90, 26, .15);
+    }
+
+    .dark-inner {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: .20em;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--orange);
+      font-weight: 400;
+
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.05;
+
+      margin-bottom: 24px;
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--cream);
+    }
+
+    .story p {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 520px;
+
+      object-fit: cover;
+
+      border-radius: 28px;
+
+      display: block;
+
+      border: 1px solid rgba(255, 255, 255, .08);
+
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .50);
+
+      transition: .4s;
+    }
+
+    .photo:hover {
+      transform: scale(1.015);
+    }
+
+
+    /* =========================
+       GALERIA COMIDA
+    ========================= */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+
+      border-radius: 22px;
+
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 90px 7%;
+    }
+
+    .contact {
+      min-height: 560px;
+
+      border-radius: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 60px 25px;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,.63),
+          rgba(0,0,0,.78)
+        ),
+        url("images/WhatsApp Image 2026-08-01 at 21.35.09.jpeg");
+
+      background-size: cover;
+      background-position: center;
+
+      border: 1px solid rgba(217, 90, 26, .25);
+    }
+
+    .contact-content {
+      max-width: 800px;
+    }
+
+    .contact h2 {
+      color: var(--orange);
+    }
+
+    .contact p {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 200;
+
+      background: #25D366;
+      color: white;
+
+      padding: 14px 19px;
+
+      border-radius: 999px;
+
+      font-weight: bold;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,.40);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #000;
+      color: #8f877f;
+      text-align: center;
+      padding: 38px 20px;
+    }
+
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 100px 6% 60px;
+        background-position: center;
+      }
+
+      .hero-logo {
+        width: 90%;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .photo {
+        height: 360px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 330px;
+      }
+
+      .whatsapp {
+        right: 14px;
+        bottom: 14px;
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
 <body>
 
-<div class="hero">
-<div>
-<h1>FINO</h1>
-<p>UN LUGAR PARA ENCONTRARSE</p>
-<p>La excusa es comer. Lo que pasa alrededor es FINO.</p>
-<a class="btn" href="https://wa.me/543518762716">Reservar por WhatsApp</a>
-</div>
-</div>
 
-<section class="story">
-<div>
-<h2>Nuestra esencia</h2>
-<p>Creemos que los mejores momentos suceden alrededor de una mesa. FINO nació para reunir personas, conversaciones y experiencias.</p>
-</div>
-<img src="fino web/Screenshot 2026-06-11 at 17.36.14.png">
+<!-- WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/5493518762716"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  WhatsApp
+</a>
+
+
+
+<!-- MENU -->
+
+<nav>
+
+  <a href="#inicio">Inicio</a>
+
+  <a href="#esencia">Experiencia</a>
+
+  <a href="#gastronomia">Gastronomía</a>
+
+  <a href="#cocteleria">Coctelería</a>
+
+  <a href="#noches">Eventos</a>
+
+  <a href="#contacto">Contacto</a>
+
+</nav>
+
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<header class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <div class="location">
+      Córdoba Capital · Sarmiento 996
+    </div>
+
+    <div class="hero-logo">
+
+      <img
+        src="images/logo-fino.png"
+        alt="FINO"
+      >
+
+    </div>
+
+    <h1>FINO</h1>
+
+    <h2>
+      Un lugar de <em>encuentro.</em>
+    </h2>
+
+    <p class="hero-text">
+      La excusa es comer.
+      Lo que pasa alrededor es FINO.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn"
+        href="https://wa.me/5493518762716"
+        target="_blank"
+      >
+        Reservar por WhatsApp
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="#gastronomia"
+      >
+        Descubrir FINO
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     NUESTRA ESENCIA
+========================= -->
+
+<section id="esencia">
+
+  <div class="story">
+
+    <div>
+
+      <div class="eyebrow">
+        Nuestra esencia
+      </div>
+
+      <h2>
+        Hay lugares donde uno quiere quedarse
+        <em>un rato más.</em>
+      </h2>
+
+      <p>
+        Creemos que los mejores momentos suceden alrededor de una mesa.
+        FINO nació para reunir personas, conversaciones y experiencias.
+      </p>
+
+    </div>
+
+
+    <img
+      class="photo"
+      src="images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
+      alt="Personas disfrutando en FINO"
+    >
+
+  </div>
+
 </section>
 
-<section class="story">
-<img src="fino web/Screenshot 2026-06-11 at 17.35.29.png">
-<div>
-<h2>La Marca</h2>
-<p>Mucho más que una promoción. Picadas, empanadas, tragos y momentos compartidos. El corazón de FINO.</p>
+
+
+<!-- =========================
+     COMPARTIR
+========================= -->
+
+<section class="dark">
+
+  <div class="dark-inner">
+
+    <div class="story">
+
+
+      <img
+        class="photo"
+        src="images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
+        alt="Amigos compartiendo en FINO"
+      >
+
+
+      <div>
+
+        <div class="eyebrow">
+          El ritual de compartir
+        </div>
+
+        <h2>
+          Comida al centro.
+          Copas llenas.
+          <em>Amigos alrededor.</em>
+        </h2>
+
+        <p>
+          Mucho más que sentarse a comer.
+          FINO es encontrarse, compartir, conversar y quedarse un poco más.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GASTRONOMIA
+========================= -->
+
+<section id="gastronomia">
+
+  <div class="eyebrow">
+    Gastronomía
+  </div>
+
+  <h2>
+    Sabores que <em>reúnen.</em>
+  </h2>
+
+  <p class="story-text">
+    Una propuesta pensada para acompañar cada momento,
+    desde una comida entre amigos hasta una tarde que se alarga.
+  </p>
+
+
+  <div class="gallery">
+
+    <img
+      src="images/DSC_0758.JPG"
+      alt="Sandwich FINO"
+    >
+
+    <img
+      src="images/DSC_1221.JPG"
+      alt="Papas FINO"
+    >
+
+    <img
+      src="images/DSC_1257.JPG"
+      alt="Papas especiales FINO"
+    >
+
+    <img
+      src="images/WhatsApp Image 2026-06-30 at 11.40.30.jpeg"
+      alt="Plato FINO"
+    >
+
+    <img
+      src="images/WhatsApp Image 2026-07-23 at 19.48.20.jpeg"
+      alt="Desayuno y cafetería FINO"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     NUESTRO CLASICO
+========================= -->
+
+<section class="dark">
+
+  <div class="dark-inner">
+
+    <div class="story">
+
+      <img
+        class="photo"
+        src="images/DSC_0758.JPG"
+        alt="Sandwich clásico FINO"
+      >
+
+      <div>
+
+        <div class="eyebrow">
+          Nuestro clásico
+        </div>
+
+        <h2>
+          Hay sabores que se convierten en
+          <em>costumbre.</em>
+        </h2>
+
+        <p>
+          Carne desmechada, pan, papas y sabores abundantes.
+          De esos platos que hacen que quieras volver.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     COCTELERIA
+========================= -->
+
+<section id="cocteleria">
+
+  <div class="story">
+
+    <div>
+
+      <div class="eyebrow">
+        Barra & coctelería
+      </div>
+
+      <h2>
+        Cada cocktail tiene una
+        <em>historia.</em>
+      </h2>
+
+      <p>
+        Vermuts, clásicos y combinaciones para acompañar cada encuentro.
+        De la primera copa hasta que la noche decida.
+      </p>
+
+    </div>
+
+
+    <img
+      class="photo"
+      src="images/DSC_9764.JPG"
+      alt="Cocktails FINO"
+    >
+
+  </div>
+
+
+  <div class="gallery">
+
+    <img
+      src="images/DSC_9619.JPG"
+      alt="Preparación de cocktail FINO"
+    >
+
+    <img
+      src="images/DSC_9764.JPG"
+      alt="Aperol FINO"
+    >
+
+    <img
+      src="images/DSC_0574.JPG"
+      alt="Barra FINO"
+    >
+
+    <img
+      src="images/DSC_9240.JPG"
+      alt="Bebidas FINO"
+    >
+
+    <img
+      src="images/DSC_0500.JPG"
+      alt="Selección de bebidas FINO"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     NOCHES / EVENTOS
+========================= -->
+
+<section class="dark" id="noches">
+
+  <div class="dark-inner">
+
+    <div class="story">
+
+      <img
+        class="photo"
+        src="images/DSC_9267.JPG"
+        alt="Evento con gente disfrutando en FINO"
+      >
+
+      <div>
+
+        <div class="eyebrow">
+          Noches FINO
+        </div>
+
+        <h2>
+          Hay noches que empiezan con una mesa
+          y terminan siendo
+          <em>un recuerdo.</em>
+        </h2>
+
+        <p>
+          Cumpleaños, reencuentros, música, eventos
+          y brindis improvisados.
+          Hay lugares donde pasan cosas.
+        </p>
+
+        <br>
+
+        <a
+          class="btn"
+          href="https://wa.me/5493518762716"
+          target="_blank"
+        >
+          Consultar por eventos
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <img
+        src="images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
+        alt="Evento FINO"
+      >
+
+      <img
+        src="images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
+        alt="Terraza FINO de noche"
+      >
+
+      <img
+        src="images/WhatsApp Image 2026-08-01 at 20.58.56.jpeg"
+        alt="Personas en FINO"
+      >
+
+      <img
+        src="images/DSC_9746.JPG"
+        alt="DJ en FINO"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<div
+  class="contact-section"
+  id="contacto"
+>
+
+  <div class="contact">
+
+    <div class="contact-content">
+
+      <div class="eyebrow">
+        Reservas
+      </div>
+
+      <h2>
+        Tu próxima mesa
+        <em>te está esperando.</em>
+      </h2>
+
+      <p>
+        📍 Sarmiento 996 · Córdoba Capital
+      </p>
+
+      <p>
+        📸 Instagram: @finocafebar
+      </p>
+
+      <br>
+
+      <a
+        class="btn"
+        href="https://wa.me/5493518762716"
+        target="_blank"
+      >
+        Reservar ahora
+      </a>
+
+    </div>
+
+  </div>
+
 </div>
-</section>
 
-<section class="story">
-<div>
-<h2>Empanadas que generan discusión</h2>
-<p>El problema nunca es cuál pedir. El problema es quién se comió la última.</p>
-</div>
-<img src="fino web/Screenshot 2026-06-11 at 17.34.56.png">
-</section>
 
-<section class="story">
-<img src="fino web/Screenshot 2026-06-11 at 17.38.59.png">
-<div>
-<h2>Nuestro clásico</h2>
-<p>Carne desmechada, pan crocante y papas recién hechas. El favorito de quienes vuelven.</p>
-</div>
-</section>
 
-<section class="story">
-<div>
-<h2>Coctelería de autor</h2>
-<p>Cada cocktail tiene una historia. Vermuts premium, clásicos y creaciones para brindar.</p>
-</div>
-<img src="fino web/Screenshot 2026-06-11 at 17.38.21.png">
-</section>
+<footer>
 
-<section class="story">
-<img src="fino web/Screenshot 2026-06-11 at 17.39.29.png">
-<div>
-<h2>Noches FINO</h2>
-<p>Cumpleaños, reencuentros y brindis improvisados. Hay lugares donde pasan cosas.</p>
-</div>
-</section>
+  FINO · Un lugar de encuentro.
 
-<section class="story">
-<div>
-<h2>Terraza FINO</h2>
-<p>Cuando cae el sol, cambia la energía. Música, luces y tiempo para quedarse.</p>
-</div>
-<img src="fino web/Screenshot 2026-06-11 at 17.40.06.png">
-</section>
+</footer>
 
-<section>
-<h2>Tu próxima mesa te está esperando</h2>
-<p>Sarmiento 996 · Córdoba Capital · @finocafebar</p>
-<a class="btn" href="https://wa.me/543518762716">Reservar ahora</a>
-</section>
 
-<footer>FINO BAR CAFÉ · Donde pasan las cosas</footer>
 </body>
+
 </html>
