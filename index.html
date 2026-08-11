@@ -43,9 +43,7 @@ a{
 }
 
 
-/* ==============================
-   MENÚ
-================================ */
+/* MENÚ */
 
 nav{
   position:fixed;
@@ -53,21 +51,16 @@ nav{
   left:0;
   width:100%;
   z-index:100;
-
   display:flex;
   justify-content:flex-end;
   align-items:center;
   gap:28px;
-
   padding:20px 6%;
-
-  background:
-  linear-gradient(
+  background:linear-gradient(
     to bottom,
     rgba(0,0,0,.90),
     rgba(0,0,0,.12)
   );
-
   backdrop-filter:blur(7px);
 }
 
@@ -82,9 +75,7 @@ nav a:hover{
 }
 
 
-/* ==============================
-   PORTADA
-================================ */
+/* PORTADA */
 
 .hero{
   min-height:100vh;
@@ -96,12 +87,11 @@ nav a:hover{
     rgba(0,0,0,.45),
     rgba(0,0,0,.42)
   ),
-  url("images/ChatGPT Image Aug 10, 2026 at 10_14_58 PM.png")
+  url("images/images/ChatGPT Image Aug 10, 2026 at 10_14_58 PM.png")
   center/cover;
 
   display:flex;
   align-items:center;
-
   padding:120px 7% 70px;
 }
 
@@ -154,9 +144,7 @@ h2 em{
 }
 
 
-/* ==============================
-   BOTONES
-================================ */
+/* BOTONES */
 
 .buttons{
   display:flex;
@@ -166,20 +154,13 @@ h2 em{
 
 .btn{
   display:inline-block;
-
   background:var(--orange);
   color:#fff;
-
   padding:14px 25px;
-
   border-radius:999px;
-
   font-weight:700;
-
   transition:.25s;
-
-  box-shadow:
-  0 0 28px rgba(217,90,26,.20);
+  box-shadow:0 0 28px rgba(217,90,26,.20);
 }
 
 .btn:hover{
@@ -188,15 +169,11 @@ h2 em{
 
 .btn-secondary{
   background:transparent;
-
-  border:
-  1px solid rgba(255,255,255,.45);
+  border:1px solid rgba(255,255,255,.45);
 }
 
 
-/* ==============================
-   SECCIONES
-================================ */
+/* SECCIONES */
 
 section{
   max-width:1400px;
@@ -206,14 +183,9 @@ section{
 
 .dark{
   max-width:none;
-
   background:#000;
-
-  border-top:
-  1px solid rgba(217,90,26,.15);
-
-  border-bottom:
-  1px solid rgba(217,90,26,.15);
+  border-top:1px solid rgba(217,90,26,.15);
+  border-bottom:1px solid rgba(217,90,26,.15);
 }
 
 .dark-inner{
@@ -223,23 +195,15 @@ section{
 
 .story{
   display:grid;
-
-  grid-template-columns:
-  1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:65px;
-
   align-items:center;
 }
 
 h2{
   color:var(--orange);
-
-  font-size:
-  clamp(38px,5vw,68px);
-
+  font-size:clamp(38px,5vw,68px);
   line-height:1.05;
-
   margin-bottom:24px;
 }
 
@@ -253,19 +217,11 @@ h2{
 .photo{
   width:100%;
   height:520px;
-
   object-fit:cover;
-
   border-radius:28px;
-
   display:block;
-
-  border:
-  1px solid rgba(255,255,255,.08);
-
-  box-shadow:
-  0 25px 70px rgba(0,0,0,.50);
-
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 25px 70px rgba(0,0,0,.50);
   transition:.4s;
 }
 
@@ -274,57 +230,39 @@ h2{
 }
 
 
-/* ==============================
-   GALERÍAS
-================================ */
+/* GALERÍAS */
 
 .gallery{
   display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
-
   margin-top:40px;
 }
 
 .gallery img{
   width:100%;
   height:360px;
-
   object-fit:cover;
-
   border-radius:22px;
-
-  border:
-  1px solid rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
 }
 
 
-/* ==============================
-   CONTACTO
-================================ */
+/* CONTACTO */
 
 .contact-section{
   max-width:1400px;
   margin:auto;
-
   padding:90px 7%;
 }
 
 .contact{
   min-height:560px;
-
   border-radius:32px;
-
   display:flex;
-
   align-items:center;
   justify-content:center;
-
   text-align:center;
-
   padding:60px 25px;
 
   background:
@@ -332,11 +270,10 @@ h2{
     rgba(0,0,0,.63),
     rgba(0,0,0,.78)
   ),
-  url("images/WhatsApp Image 2026-08-01 at 21.35.09.jpeg")
+  url("images/images/WhatsApp Image 2026-08-01 at 21.35.09.jpeg")
   center/cover;
 
-  border:
-  1px solid rgba(217,90,26,.25);
+  border:1px solid rgba(217,90,26,.25);
 }
 
 .contact-content{
@@ -349,50 +286,33 @@ h2{
 }
 
 
-/* ==============================
-   WHATSAPP
-================================ */
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
-
   right:22px;
   bottom:22px;
-
   z-index:200;
-
   background:#25D366;
   color:#fff;
-
   padding:14px 19px;
-
   border-radius:999px;
-
   font-weight:700;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.40);
+  box-shadow:0 10px 30px rgba(0,0,0,.40);
 }
 
 
-/* ==============================
-   FOOTER
-================================ */
+/* FOOTER */
 
 footer{
   background:#000;
-
   color:#8f877f;
-
   text-align:center;
-
   padding:38px 20px;
 }
 
 
-/* ==============================
-   CELULAR
-================================ */
+/* CELULAR */
 
 @media(max-width:850px){
 
@@ -401,13 +321,11 @@ footer{
   }
 
   .hero{
-    padding:
-    100px 6% 60px;
+    padding:100px 6% 60px;
   }
 
   section{
-    padding:
-    75px 6%;
+    padding:75px 6%;
   }
 
   .story{
@@ -453,46 +371,23 @@ WhatsApp
 </a>
 
 
-
 <!-- MENÚ -->
 
 <nav>
 
-<a href="#inicio">
-Inicio
-</a>
-
-<a href="#esencia">
-Experiencia
-</a>
-
-<a href="#gastronomia">
-Gastronomía
-</a>
-
-<a href="#cocteleria">
-Coctelería
-</a>
-
-<a href="#eventos">
-Eventos
-</a>
-
-<a href="#contacto">
-Contacto
-</a>
+<a href="#inicio">Inicio</a>
+<a href="#esencia">Experiencia</a>
+<a href="#gastronomia">Gastronomía</a>
+<a href="#cocteleria">Coctelería</a>
+<a href="#eventos">Eventos</a>
+<a href="#contacto">Contacto</a>
 
 </nav>
 
 
+<!-- PORTADA -->
 
-<!-- ==================================
-     PORTADA
-=================================== -->
-
-<header
-class="hero"
-id="inicio">
+<header class="hero" id="inicio">
 
 <div class="hero-content">
 
@@ -505,15 +400,12 @@ FINO
 </div>
 
 <h2>
-Un lugar de
-<em>encuentro.</em>
+Un lugar de <em>encuentro.</em>
 </h2>
 
 <p class="hero-text">
-
 La excusa es comer.
 Lo que pasa alrededor es FINO.
-
 </p>
 
 <div class="buttons">
@@ -522,17 +414,13 @@ Lo que pasa alrededor es FINO.
 class="btn"
 href="https://wa.me/5493518762716"
 target="_blank">
-
 Reservar por WhatsApp
-
 </a>
 
 <a
 class="btn btn-secondary"
 href="#gastronomia">
-
 Descubrir FINO
-
 </a>
 
 </div>
@@ -542,10 +430,7 @@ Descubrir FINO
 </header>
 
 
-
-<!-- ==================================
-     NUESTRA ESENCIA
-=================================== -->
+<!-- NUESTRA ESENCIA -->
 
 <section id="esencia">
 
@@ -558,29 +443,23 @@ Nuestra esencia
 </div>
 
 <h2>
-
 Hay lugares donde uno quiere quedarse
-
 <em>un rato más.</em>
-
 </h2>
 
 <p>
-
 Creemos que los mejores momentos suceden
 alrededor de una mesa.
 
 FINO nació para reunir personas,
 conversaciones y experiencias.
-
 </p>
 
 </div>
 
-
 <img
 class="photo"
-src="images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
+src="images/images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
 alt="Personas disfrutando en FINO">
 
 </div>
@@ -588,10 +467,7 @@ alt="Personas disfrutando en FINO">
 </section>
 
 
-
-<!-- ==================================
-     COMPARTIR
-=================================== -->
+<!-- COMPARTIR -->
 
 <section class="dark">
 
@@ -599,12 +475,10 @@ alt="Personas disfrutando en FINO">
 
 <div class="story">
 
-
 <img
 class="photo"
-src="images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
+src="images/images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
 alt="Personas compartiendo en FINO">
-
 
 <div>
 
@@ -613,21 +487,16 @@ El ritual de compartir
 </div>
 
 <h2>
-
 Comida al centro.
 Copas llenas.
-
 <em>Amigos alrededor.</em>
-
 </h2>
 
 <p>
-
 Mucho más que sentarse a comer.
 
 FINO es encontrarse, compartir,
 conversar y quedarse un poco más.
-
 </p>
 
 </div>
@@ -639,10 +508,7 @@ conversar y quedarse un poco más.
 </section>
 
 
-
-<!-- ==================================
-     GASTRONOMÍA
-=================================== -->
+<!-- GASTRONOMÍA -->
 
 <section id="gastronomia">
 
@@ -651,64 +517,47 @@ Gastronomía
 </div>
 
 <h2>
-
-Sabores que
-
-<em>reúnen.</em>
-
+Sabores que <em>reúnen.</em>
 </h2>
 
 <p class="intro">
-
 Una propuesta pensada para acompañar
 cada momento: desayunos, meriendas,
 comidas y platos para compartir.
-
 </p>
-
 
 <div class="gallery">
 
-
 <img
-src="images/DSC_0758.JPG"
+src="images/images/DSC_0758.JPG"
 alt="Gastronomía FINO">
 
-
 <img
-src="images/DSC_1221.JPG"
+src="images/images/DSC_1221.JPG"
 alt="Plato FINO">
 
-
 <img
-src="images/DSC_1257.JPG"
+src="images/images/DSC_1257.JPG"
 alt="Gastronomía en FINO">
 
-
 <img
-src="images/WhatsApp Image 2026-06-30 at 11.40.30.jpeg"
+src="images/images/WhatsApp Image 2026-06-30 at 11.40.30.jpeg"
 alt="Comida FINO">
 
-
 <img
-src="images/WhatsApp Image 2026-07-23 at 19.48.20.jpeg"
+src="images/images/WhatsApp Image 2026-07-23 at 19.48.20.jpeg"
 alt="Desayuno FINO">
 
-
 <img
-src="images/IMG_8208.jpg"
+src="images/images/IMG_8208.jpg"
 alt="Propuesta gastronómica FINO">
-
 
 </div>
 
 </section>
 
 
-
-<!-- ==================================
-     NUESTRO CLÁSICO
-=================================== -->
+<!-- NUESTRO CLÁSICO -->
 
 <section class="dark">
 
@@ -716,12 +565,10 @@ alt="Propuesta gastronómica FINO">
 
 <div class="story">
 
-
 <img
 class="photo"
-src="images/DSC_0758.JPG"
+src="images/images/DSC_0758.JPG"
 alt="Clásico FINO">
-
 
 <div>
 
@@ -730,19 +577,14 @@ Nuestro clásico
 </div>
 
 <h2>
-
 Hay sabores que se convierten en
-
 <em>costumbre.</em>
-
 </h2>
 
 <p>
-
 Propuestas abundantes,
 sabores que se disfrutan
 y platos que hacen que quieras volver.
-
 </p>
 
 </div>
@@ -754,10 +596,7 @@ y platos que hacen que quieras volver.
 </section>
 
 
-
-<!-- ==================================
-     COCTELERÍA
-=================================== -->
+<!-- COCTELERÍA -->
 
 <section id="cocteleria">
 
@@ -770,92 +609,71 @@ Barra & Coctelería
 </div>
 
 <h2>
-
 Cada cocktail tiene una
-
 <em>historia.</em>
-
 </h2>
 
 <p>
-
 Vermuts, clásicos y combinaciones
 para acompañar cada encuentro.
 
 De la primera copa hasta que
 la noche decida.
-
 </p>
 
 </div>
 
-
 <img
 class="photo"
-src="images/DSC_9764.JPG"
+src="images/images/DSC_9764.JPG"
 alt="Cocktails FINO">
 
 </div>
 
 
-
 <div class="gallery">
 
-
 <img
-src="images/DSC_9619.JPG"
+src="images/images/DSC_9619.JPG"
 alt="Preparación de cocktail">
 
-
 <img
-src="images/DSC_9764.JPG"
+src="images/images/DSC_9764.JPG"
 alt="Cocktail FINO">
 
-
 <img
-src="images/DSC_0574.JPG"
+src="images/images/DSC_0574.JPG"
 alt="Barra FINO">
 
-
 <img
-src="images/DSC_9240.JPG"
+src="images/images/DSC_9240.JPG"
 alt="Bebidas FINO">
 
-
 <img
-src="images/DSC_0500.JPG"
+src="images/images/DSC_0500.JPG"
 alt="Barra y bebidas FINO">
 
-
 <img
-src="images/DSC_0573.jpg"
+src="images/images/DSC_0573.jpg"
 alt="Coctelería FINO">
-
 
 </div>
 
 </section>
 
 
+<!-- EVENTOS -->
 
-<!-- ==================================
-     EVENTOS / NOCHES
-=================================== -->
-
-<section
-class="dark"
-id="eventos">
+<section class="dark" id="eventos">
 
 <div class="dark-inner">
 
 <div class="story">
 
-
 <img
 class="photo"
-src="images/DSC_9267.JPG"
+src="images/images/DSC_9267.JPG"
 alt="Evento en FINO">
-
 
 <div>
 
@@ -864,21 +682,16 @@ Noches FINO
 </div>
 
 <h2>
-
 Hay noches que empiezan
 con una mesa y terminan siendo
-
 <em>un recuerdo.</em>
-
 </h2>
 
 <p>
-
 Cumpleaños, reencuentros,
 música, eventos y brindis improvisados.
 
 Hay lugares donde pasan cosas.
-
 </p>
 
 <br>
@@ -887,9 +700,7 @@ Hay lugares donde pasan cosas.
 class="btn"
 href="https://wa.me/5493518762716"
 target="_blank">
-
 Consultar por eventos
-
 </a>
 
 </div>
@@ -897,39 +708,31 @@ Consultar por eventos
 </div>
 
 
-
 <div class="gallery">
 
-
 <img
-src="images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
+src="images/images/WhatsApp Image 2026-08-01 at 20.58.55 (1).jpeg"
 alt="Personas en FINO">
 
-
 <img
-src="images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
+src="images/images/WhatsApp Image 2026-08-01 at 20.58.55.jpeg"
 alt="Noche FINO">
 
-
 <img
-src="images/WhatsApp Image 2026-08-01 at 20.58.56.jpeg"
+src="images/images/WhatsApp Image 2026-08-01 at 20.58.56.jpeg"
 alt="Amigos en FINO">
 
-
 <img
-src="images/DSC_9746.JPG"
+src="images/images/DSC_9746.JPG"
 alt="DJ en FINO">
 
-
 <img
-src="images/DSC_9116.JPG"
+src="images/images/DSC_9116.JPG"
 alt="Evento FINO">
 
-
 <img
-src="images/DSC_0270.jpg"
+src="images/images/DSC_0270.jpg"
 alt="Experiencia FINO">
-
 
 </div>
 
@@ -938,14 +741,9 @@ alt="Experiencia FINO">
 </section>
 
 
+<!-- CONTACTO -->
 
-<!-- ==================================
-     CONTACTO / RESERVAS
-=================================== -->
-
-<div
-class="contact-section"
-id="contacto">
+<div class="contact-section" id="contacto">
 
 <div class="contact">
 
@@ -956,11 +754,8 @@ Reservas
 </div>
 
 <h2>
-
 Tu próxima mesa
-
 <em>te está esperando.</em>
-
 </h2>
 
 <p>
@@ -977,9 +772,7 @@ Tu próxima mesa
 class="btn"
 href="https://wa.me/5493518762716"
 target="_blank">
-
 Reservar ahora
-
 </a>
 
 </div>
@@ -989,15 +782,8 @@ Reservar ahora
 </div>
 
 
-
-<!-- ==================================
-     FOOTER
-=================================== -->
-
 <footer>
-
 FINO · Un lugar de encuentro.
-
 </footer>
 
 
