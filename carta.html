@@ -105,22 +105,29 @@ a{
 
   display:flex;
   align-items:center;
+  justify-content:center;
 
   padding:140px 7% 80px;
 
+  text-align:center;
+
   background:
-  linear-gradient(
-    90deg,
-    rgba(0,0,0,.90),
-    rgba(0,0,0,.58),
-    rgba(0,0,0,.22)
+  radial-gradient(
+    circle at 50% 45%,
+    rgba(217,90,26,.17),
+    rgba(217,90,26,.04) 32%,
+    transparent 62%
   ),
-  url("menu/sandwich-papas.jpg")
-  center/cover;
+  linear-gradient(
+    180deg,
+    #111 0%,
+    #080808 65%,
+    #050505 100%
+  );
 }
 
 .hero-content{
-  max-width:750px;
+  max-width:850px;
 }
 
 .eyebrow{
@@ -134,11 +141,11 @@ a{
 
 .hero h1{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(75px,11vw,140px);
+  font-size:clamp(80px,13vw,155px);
   color:var(--orange);
   font-weight:400;
   line-height:.85;
-  margin-bottom:28px;
+  margin-bottom:30px;
 }
 
 .hero h2{
@@ -154,7 +161,8 @@ a{
 }
 
 .hero p{
-  max-width:590px;
+  max-width:620px;
+  margin:auto;
   color:#ded8cf;
   font-size:19px;
 }
@@ -224,7 +232,7 @@ a{
 .intro{
   max-width:1100px;
   margin:auto;
-  padding:95px 7% 70px;
+  padding:95px 7% 65px;
   text-align:center;
 }
 
@@ -245,7 +253,7 @@ a{
 
 
 /* =========================
-   FOTO DESTACADA
+   IMÁGENES
 ========================= */
 
 .feature-photo{
@@ -264,6 +272,42 @@ a{
   border:1px solid rgba(255,255,255,.08);
 
   box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+.photo-break{
+  max-width:1250px;
+  margin:0 auto 100px;
+  padding:0 6%;
+}
+
+.photo-break-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.photo-break img{
+  display:block;
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.single-photo{
+  max-width:1250px;
+  margin:0 auto 100px;
+  padding:0 6%;
+}
+
+.single-photo img{
+  display:block;
+  width:100%;
+  height:570px;
+  object-fit:cover;
+  border-radius:26px;
+  border:1px solid rgba(255,255,255,.08);
 }
 
 
@@ -310,7 +354,6 @@ a{
   letter-spacing:.12em;
   font-size:13px;
   font-weight:700;
-
   margin:35px 0 8px;
 }
 
@@ -360,32 +403,6 @@ a{
   line-height:1.55;
   margin-top:6px;
   max-width:92%;
-}
-
-
-/* =========================
-   FOTOS INTERMEDIAS
-========================= */
-
-.photo-break{
-  max-width:1250px;
-  margin:0 auto 100px;
-  padding:0 6%;
-}
-
-.photo-break-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.photo-break img{
-  display:block;
-  width:100%;
-  height:500px;
-  object-fit:cover;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.08);
 }
 
 
@@ -447,16 +464,17 @@ a{
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-align:center;
 
   padding:90px 7%;
 
   background:
   linear-gradient(
-    rgba(0,0,0,.42),
+    rgba(0,0,0,.45),
     rgba(0,0,0,.82)
   ),
-  url("menu/picada-fritos.png")
+  url("menu/sandwich-papas.jpg")
   center/cover;
 }
 
@@ -484,6 +502,7 @@ a{
 
 .btn{
   display:inline-block;
+
   padding:14px 27px;
 
   background:var(--orange);
@@ -503,12 +522,16 @@ a{
 }
 
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP
+========================= */
 
 .whatsapp{
   position:fixed;
+
   right:22px;
   bottom:22px;
+
   z-index:1500;
 
   background:#25D366;
@@ -524,7 +547,9 @@ a{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#000;
@@ -608,6 +633,15 @@ footer{
     height:430px;
   }
 
+  .single-photo{
+    padding:0 5%;
+    margin-bottom:70px;
+  }
+
+  .single-photo img{
+    height:450px;
+  }
+
   .happy{
     padding:75px 7%;
   }
@@ -635,6 +669,8 @@ footer{
 
 <body>
 
+
+<!-- WHATSAPP -->
 
 <a
 class="whatsapp"
@@ -668,7 +704,9 @@ Carta
 </nav>
 
 
-<!-- PORTADA -->
+<!-- =========================
+     PORTADA
+========================= -->
 
 <header class="hero">
 
@@ -690,8 +728,8 @@ La excusa es comer.
 
 <p>
 Desde el café de la mañana hasta la última copa.
-Una propuesta pensada para compartir, disfrutar
-y quedarse un rato más.
+Una propuesta pensada para compartir,
+disfrutar y quedarse un rato más.
 </p>
 
 </div>
@@ -699,7 +737,7 @@ y quedarse un rato más.
 </header>
 
 
-<!-- CATEGORÍAS -->
+<!-- NAVEGACIÓN DE CATEGORÍAS -->
 
 <div class="category-nav">
 
@@ -743,7 +781,9 @@ cocktails y vinos para acompañar cada momento.
 </section>
 
 
-<!-- FOTO -->
+<!-- =========================
+     IMAGEN 1: DESAYUNO
+========================= -->
 
 <div class="feature-photo">
 
@@ -759,7 +799,6 @@ alt="Desayuno FINO">
 ========================= -->
 
 <main class="menu">
-
 
 <section class="menu-section" id="cafeteria">
 
@@ -860,7 +899,6 @@ Brunch
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Mediterráneo</div>
@@ -871,7 +909,6 @@ Jamón crudo, queso, rúcula fresca y queso rallado
 en nuestro pan francés. Acompañados de papas copetín
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -884,7 +921,6 @@ en nuestro pan francés. Acompañados de papas copetín
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Chipá clásico</div>
@@ -894,7 +930,6 @@ en nuestro pan francés. Acompañados de papas copetín
 Jamón y queso. Acompañados de papas copetín
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -907,7 +942,6 @@ Acompañados de papas copetín
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Chipá de la casa</div>
@@ -919,7 +953,6 @@ Acompañados de papas copetín
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Carlitos</div>
@@ -930,7 +963,6 @@ Pan de miga, jamón, queso y mayonesa casera.
 Acompañado de papas copetín
 </div>
 </div>
-
 
 </div>
 
@@ -947,40 +979,19 @@ Acompañado de papas copetín
 <h2>Café</h2>
 </div>
 
-
 <div class="subheading">
 Calientes
 </div>
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Espresso</div><div class="item-price">$2.500</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Lungo</div><div class="item-price">$2.800</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Cortado</div><div class="item-price">$3.500</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Cortado doble</div><div class="item-price">$4.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Café doble</div><div class="item-price">$4.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Latte</div><div class="item-price">$4.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Flat White</div><div class="item-price">$4.800</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Espresso</div><div class="item-price">$2.500</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Lungo</div><div class="item-price">$2.800</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Cortado</div><div class="item-price">$3.500</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Cortado doble</div><div class="item-price">$4.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Café doble</div><div class="item-price">$4.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Latte</div><div class="item-price">$4.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Flat White</div><div class="item-price">$4.800</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Latte saborizado</div><div class="item-price">$4.800</div></div>
@@ -1006,21 +1017,10 @@ Fríos
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Jugo de naranja</div><div class="item-price">$3.500</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Ice Latte</div><div class="item-price">$4.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Licuado de banana</div><div class="item-price">$5.500</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Licuado de frutilla</div><div class="item-price">$5.500</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Jugo de naranja</div><div class="item-price">$3.500</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Ice Latte</div><div class="item-price">$4.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Licuado de banana</div><div class="item-price">$5.500</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Licuado de frutilla</div><div class="item-price">$5.500</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Frappuccino</div><div class="item-price">$5.900</div></div>
@@ -1031,11 +1031,13 @@ Fríos
 
 </section>
 
-
 </main>
 
 
-<!-- FOTO -->
+<!-- =========================
+     IMAGEN 2: CROISSANT
+     IMAGEN 3: PAPAS
+========================= -->
 
 <div class="photo-break">
 
@@ -1067,7 +1069,6 @@ alt="Papas especiales FINO">
 <h2>Entradas</h2>
 </div>
 
-
 <div class="subheading">
 Papas
 </div>
@@ -1081,7 +1082,6 @@ Papas
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Explosivas</div>
@@ -1091,7 +1091,6 @@ Papas
 400 g de papas fritas con cheddar fundido, bacon y verdeo
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -1118,11 +1117,8 @@ Especiales
 <div class="item-name">Empanaditas fritas de carne</div>
 <div class="item-price">$2.800</div>
 </div>
-<div class="item-desc">
-Porción por dos
+<div class="item-desc">Porción por dos</div>
 </div>
-</div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -1134,7 +1130,6 @@ Porción por dos
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Nuggets de pollo</div>
@@ -1144,7 +1139,6 @@ Porción por dos
 400 g, con salsa yasgua y alioli
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -1161,9 +1155,7 @@ Con papas fritas, salsa picante y alioli
 </section>
 
 
-<!-- =========================
-     TABLAS
-========================= -->
+<!-- TABLAS -->
 
 <section class="menu-section" id="tablas">
 
@@ -1173,18 +1165,16 @@ Con papas fritas, salsa picante y alioli
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top">
 <div class="item-name">Tabla fría</div>
 <div class="item-price">$31.000</div>
 </div>
 <div class="item-desc">
-Salame, jamón crudo, jamón cocido, queso, aceitunas
-y rodajas de pan caliente a las hierbas
+Salame, jamón crudo, jamón cocido, queso,
+aceitunas y rodajas de pan caliente a las hierbas
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top">
@@ -1193,15 +1183,32 @@ y rodajas de pan caliente a las hierbas
 </div>
 <div class="item-desc">
 Ravioles de carne desmechada fritos, albondiguitas,
-arancinis al ragú, bastones de muzzarella, nugget de pollo,
-empanadas de carne fritas y papas fritas
+arancinis al ragú, bastones de muzzarella,
+nugget de pollo, empanadas de carne fritas y papas fritas
 </div>
 </div>
-
 
 </div>
 
 </section>
+
+</main>
+
+
+<!-- =========================
+     IMAGEN 4: PICADA
+========================= -->
+
+<div class="single-photo">
+
+<img
+src="menu/picada-fritos.png"
+alt="Picada y fritos FINO">
+
+</div>
+
+
+<main class="menu">
 
 
 <!-- =========================
@@ -1214,7 +1221,6 @@ empanadas de carne fritas y papas fritas
 <h2>Cocina</h2>
 </div>
 
-
 <div class="subheading">
 Minutas
 </div>
@@ -1225,17 +1231,9 @@ Con guarnición
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Suprema clásica</div><div class="item-price">$12.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Suprema a caballo</div><div class="item-price">$13.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Suprema napolitana</div><div class="item-price">$16.000</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Suprema clásica</div><div class="item-price">$12.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Suprema a caballo</div><div class="item-price">$13.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Suprema napolitana</div><div class="item-price">$16.000</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Suprema FINO</div><div class="item-price">$16.000</div></div>
@@ -1251,7 +1249,6 @@ Ensaladas
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">César</div><div class="item-price">$10.900</div></div>
 <div class="item-desc">
@@ -1260,7 +1257,6 @@ y queso en hebras con alioli
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Mediterránea</div><div class="item-price">$14.900</div></div>
 <div class="item-desc">
@@ -1268,7 +1264,6 @@ Rúcula, aceitunas negras, jamón crudo,
 queso en hebras y tomates confitados
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Completa</div><div class="item-price">$10.900</div></div>
@@ -1287,7 +1282,6 @@ Entrepanes
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Philly Cheesesteak</div><div class="item-price">$14.900</div></div>
 <div class="item-desc">
@@ -1295,7 +1289,6 @@ Carne desmechada con cebolla en reducción de cerveza negra
 y cheddar. Acompañado de papas fritas
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Pollo al disco</div><div class="item-price">$14.900</div></div>
@@ -1306,7 +1299,6 @@ Acompañado de papas fritas
 </div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Supremo clásico</div><div class="item-price">$12.000</div></div>
 <div class="item-desc">
@@ -1314,7 +1306,6 @@ Suprema de pollo, lechuga y tomate.
 Acompañado de papas fritas
 </div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Supremo completo</div><div class="item-price">$14.900</div></div>
@@ -1324,15 +1315,12 @@ lechuga y tomate. Acompañado de papas fritas
 </div>
 </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     PIZZAS
-========================= -->
+<!-- PIZZAS -->
 
 <section class="menu-section" id="pizzas">
 
@@ -1342,62 +1330,43 @@ lechuga y tomate. Acompañado de papas fritas
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
-<div class="item-top">
-<div class="item-name">Muzzarella</div>
-<div class="item-price">$12.000</div>
-</div>
+<div class="item-top"><div class="item-name">Muzzarella</div><div class="item-price">$12.000</div></div>
 <div class="item-desc">
 Salsa de tomate, muzzarella, orégano y aceitunas
 </div>
 </div>
 
-
 <div class="menu-item">
-<div class="item-top">
-<div class="item-name">Napolitana</div>
-<div class="item-price">$14.000</div>
-</div>
+<div class="item-top"><div class="item-name">Napolitana</div><div class="item-price">$14.000</div></div>
 <div class="item-desc">
 Salsa de tomate, muzzarella, rodajas de tomate,
 provolone en hebras, orégano y aceitunas
 </div>
 </div>
 
-
 <div class="menu-item">
-<div class="item-top">
-<div class="item-name">Especial con huevo</div>
-<div class="item-price">$16.000</div>
-</div>
+<div class="item-top"><div class="item-name">Especial con huevo</div><div class="item-price">$16.000</div></div>
 <div class="item-desc">
 Salsa de tomate, muzzarella, jamón,
 huevo, orégano y aceitunas
 </div>
 </div>
 
-
 <div class="menu-item">
-<div class="item-top">
-<div class="item-name highlight">Rúcula</div>
-<div class="item-price">$18.000</div>
-</div>
+<div class="item-top"><div class="item-name highlight">Rúcula</div><div class="item-price">$18.000</div></div>
 <div class="item-desc">
 Salsa de tomate, muzzarella, jamón crudo,
 rúcula, provolone en hebras, orégano y aceitunas
 </div>
 </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     POSTRES
-========================= -->
+<!-- POSTRES -->
 
 <section class="menu-section" id="postres">
 
@@ -1408,16 +1377,15 @@ rúcula, provolone en hebras, orégano y aceitunas
 <div class="menu-grid">
 
 <div class="menu-item"><div class="item-top"><div class="item-name">Chocotorta</div><div class="item-price">$6.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Cheesecake</div><div class="item-price">$7.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Tiramisú</div><div class="item-price">$7.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Helado</div><div class="item-price">$6.000</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Affogato</div><div class="item-price">$6.000</div></div>
-<div class="item-desc">Helado de vainilla con espresso</div>
+<div class="item-desc">
+Helado de vainilla con espresso
+</div>
 </div>
 
 </div>
@@ -1425,9 +1393,7 @@ rúcula, provolone en hebras, orégano y aceitunas
 </section>
 
 
-<!-- =========================
-     BEBIDAS
-========================= -->
+<!-- BEBIDAS -->
 
 <section class="menu-section" id="bebidas">
 
@@ -1435,54 +1401,43 @@ rúcula, provolone en hebras, orégano y aceitunas
 <h2>Bebidas</h2>
 </div>
 
-
 <div class="subheading">
 Sin alcohol
 </div>
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Eco de los Andes</div><div class="item-price">$3.000</div></div>
 <div class="item-desc">Con o sin gas</div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Gaseosas</div><div class="item-price">$3.500</div></div>
 <div class="item-desc">Pepsi, Pepsi Black, 7up o Mirinda</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">H2O</div><div class="item-price">$3.500</div></div>
 <div class="item-desc">Limón, manzana, naranja o pomelo rosado</div>
 </div>
 
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Red Bull</div><div class="item-price">$4.000</div></div>
-</div>
-
+<div class="menu-item"><div class="item-top"><div class="item-name">Red Bull</div><div class="item-price">$4.000</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Cerveza sin alcohol</div><div class="item-price">$6.000</div></div>
 <div class="item-desc">Corona 0.0 o Stella 0.0</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Limonada</div><div class="item-price">$4.000</div></div>
 <div class="item-desc">Con menta y jengibre</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Jarra de limonada</div><div class="item-price">$12.000</div></div>
 <div class="item-desc">Con menta y jengibre</div>
 </div>
-
 
 </div>
 
@@ -1493,23 +1448,14 @@ Cervezas
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name highlight">Chop artesanal</div><div class="item-price">$6.000</div></div>
 <div class="item-desc">Pale Ale, Scottish o IPA</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Coronita</div><div class="item-price">$6.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Stella litro</div><div class="item-price">$12.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Balde Corona x4</div><div class="item-price">$20.000</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Coronita</div><div class="item-price">$6.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Stella litro</div><div class="item-price">$12.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Balde Corona x4</div><div class="item-price">$20.000</div></div></div>
 
 </div>
 
@@ -1533,16 +1479,13 @@ Jarras
 </section>
 
 
-<!-- =========================
-     COCKTAILS
-========================= -->
+<!-- COCKTAILS -->
 
 <section class="menu-section" id="cocktails">
 
 <div class="section-heading">
 <h2>Cocktails</h2>
 </div>
-
 
 <div class="subheading">
 Clásicos · $10.000
@@ -1604,9 +1547,7 @@ Sin alcohol · $10.000
 </section>
 
 
-<!-- =========================
-     DESTILADOS
-========================= -->
+<!-- DESTILADOS -->
 
 <section class="menu-section" id="destilados">
 
@@ -1614,30 +1555,21 @@ Sin alcohol · $10.000
 <h2>Destilados</h2>
 </div>
 
-
 <div class="subheading">
 Importados
 </div>
 
 <div class="menu-grid">
 
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Beefeater con tónica</div><div class="item-price">$15.000</div></div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Hendrick's con tónica</div><div class="item-price">$20.000</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Beefeater con tónica</div><div class="item-price">$15.000</div></div></div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Hendrick's con tónica</div><div class="item-price">$20.000</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">$12.000</div></div>
 <div class="item-desc">Con Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Mojito Malibú</div><div class="item-price">$10.000</div></div>
-</div>
+<div class="menu-item"><div class="item-top"><div class="item-name">Mojito Malibú</div><div class="item-price">$10.000</div></div></div>
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Absolut</div><div class="item-price">$12.000</div></div>
@@ -1664,19 +1596,12 @@ Whiskies
 <div class="menu-grid">
 
 <div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Red</div><div class="item-price">$10.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">The Famous Grouse</div><div class="item-price">$10.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Black</div><div class="item-price">$12.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Jim Beam</div><div class="item-price">$12.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Jack Daniels</div><div class="item-price">$14.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Chivas Regal 12</div><div class="item-price">$14.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Gold</div><div class="item-price">$20.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Macallan 12</div><div class="item-price">$35.000</div></div></div>
 
 </div>
@@ -1688,64 +1613,53 @@ Botellas
 
 <div class="menu-grid">
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Fernet Branca</div><div class="item-price">$50.000</div></div>
 <div class="item-desc">Con una Coca</div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Gin Malandra</div><div class="item-price">$50.000</div></div>
 <div class="item-desc">Con una tónica y plato de frutas</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Vodka Malandra</div><div class="item-price">$40.000</div></div>
 <div class="item-desc">Con tres Red Bull</div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Absolut</div><div class="item-price">$60.000</div></div>
 <div class="item-desc">Con tres Red Bull</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">$70.000</div></div>
 <div class="item-desc">Con tres Red Bull</div>
 </div>
-
 
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Cîroc</div><div class="item-price">$100.000</div></div>
 <div class="item-desc">Con tres Red Bull</div>
 </div>
 
-
 <div class="menu-item">
 <div class="item-top"><div class="item-name">Grey Goose</div><div class="item-price">$120.000</div></div>
 <div class="item-desc">Con tres Red Bull</div>
 </div>
-
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     VINOS
-========================= -->
+<!-- VINOS -->
 
 <section class="menu-section" id="vinos">
 
 <div class="section-heading">
 <h2>Vinos</h2>
 </div>
-
 
 <div class="subheading">
 Por copa · Tinto o blanco
@@ -1770,11 +1684,8 @@ Tintos
 <div class="menu-grid">
 
 <div class="menu-item"><div class="item-top"><div class="item-name">Santa Julia Cabernet Franc</div><div class="item-price">$15.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Norton DOC. Malbec</div><div class="item-price">$20.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">DV Catena Malbec</div><div class="item-price">$25.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">DV Catena Cabernet</div><div class="item-price">$25.000</div></div></div>
 
 </div>
@@ -1787,9 +1698,7 @@ Blancos
 <div class="menu-grid">
 
 <div class="menu-item"><div class="item-top"><div class="item-name">Anaia</div><div class="item-price">$20.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Norton Libre</div><div class="item-price">$30.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Norton Altura</div><div class="item-price">$40.000</div></div></div>
 
 </div>
@@ -1802,18 +1711,13 @@ Chardonnay
 <div class="menu-grid">
 
 <div class="menu-item"><div class="item-top"><div class="item-name">Andeluna Altitud</div><div class="item-price">$18.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Trapiche Reserva</div><div class="item-price">$18.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name">Norton Reserva</div><div class="item-price">$25.000</div></div></div>
-
 <div class="menu-item"><div class="item-top"><div class="item-name highlight">Hermandad</div><div class="item-price">$45.000</div></div></div>
 
 </div>
 
-
 </section>
-
 
 </main>
 
@@ -1833,7 +1737,6 @@ De 17 a 22 h · Todos los días
 <h2>
 Happy Hour
 </h2>
-
 
 <div class="happy-item">
 <span>2 Pintas</span>
@@ -1860,13 +1763,15 @@ Happy Hour
 <strong>$20.000</strong>
 </div>
 
-
 </div>
 
 </section>
 
 
-<!-- FINAL -->
+<!-- =========================
+     IMAGEN 5: SANDWICH
+     ÚLTIMA IMAGEN
+========================= -->
 
 <section class="final">
 
