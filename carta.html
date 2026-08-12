@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carta | FINO</title>
+
+<meta name="description"
+content="Carta de FINO Bar Café. Gastronomía, cafetería, cocktails, vinos y bebidas en Córdoba Capital.">
+
+<style>
+
+:root{
+  --black:#080808;
+  --orange:#d95a1a;
+  --cream:#f5f1e8;
+  --muted:#b9b1a7;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--cream);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* NAVEGACIÓN SUPERIOR */
+
+.top-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 6%;
+
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(10px);
+
+  border-bottom:1px solid rgba(217,90,26,.18);
+}
+
+.logo{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--orange);
+  font-size:30px;
+  line-height:1;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.nav-links a{
+  font-size:13px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.nav-links a:hover{
+  color:var(--orange);
+}
+
+.nav-links .active{
+  color:var(--orange);
+  font-weight:700;
+}
+
+
+/* PORTADA CARTA */
+
+.menu-hero{
+  min-height:500px;
+  padding:150px 7% 80px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background:
+  radial-gradient(
+    circle at center,
+    rgba(217,90,26,.12),
+    transparent 50%
+  ),
+  #080808;
+}
+
+.menu-hero-content{
+  max-width:850px;
+}
+
+.eyebrow{
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.menu-hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--orange);
+
+  font-size:clamp(65px,10vw,125px);
+  font-weight:400;
+  line-height:.9;
+
+  margin-bottom:25px;
+}
+
+.menu-hero h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(28px,4vw,48px);
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.menu-hero h2 em{
+  color:var(--orange);
+  font-style:italic;
+}
+
+.menu-hero p{
+  color:var(--muted);
+  font-size:18px;
+}
+
+
+/* CATEGORÍAS */
+
+.categories-wrapper{
+  position:sticky;
+  top:68px;
+  z-index:900;
+
+  background:rgba(8,8,8,.96);
+  backdrop-filter:blur(10px);
+
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.categories{
+  max-width:1400px;
+  margin:auto;
+
+  display:flex;
+  gap:10px;
+
+  overflow-x:auto;
+
+  padding:16px 6%;
+
+  scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.categories a{
+  flex:none;
+
+  padding:9px 16px;
+
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+
+  color:#ddd5cb;
+
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+
+  transition:.25s;
+}
+
+.categories a:hover{
+  color:white;
+  border-color:var(--orange);
+  background:rgba(217,90,26,.12);
+}
+
+
+/* CONTENIDO */
+
+.menu-container{
+  max-width:1150px;
+  margin:auto;
+  padding:70px 6% 110px;
+}
+
+.menu-section{
+  scroll-margin-top:150px;
+  margin-bottom:80px;
+}
+
+.section-title{
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.section-title span{
+  display:block;
+  color:var(--orange);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  margin-bottom:8px;
+}
+
+.section-title h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(34px,5vw,55px);
+  color:var(--cream);
+}
+
+
+/* IMÁGENES DE LA CARTA */
+
+.menu-image{
+  display:block;
+
+  width:100%;
+  max-width:900px;
+  height:auto;
+
+  margin:0 auto;
+
+  border-radius:22px;
+
+  border:1px solid rgba(255,255,255,.09);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.55),
+  0 0 0 1px rgba(217,90,26,.04);
+}
+
+
+/* SEPARADOR */
+
+.divider{
+  width:70px;
+  height:1px;
+  background:var(--orange);
+  opacity:.65;
+
+  margin:70px auto;
+}
+
+
+/* FINAL */
+
+.menu-end{
+  text-align:center;
+  padding:30px 20px 90px;
+}
+
+.menu-end h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(35px,5vw,58px);
+  color:var(--orange);
+  margin-bottom:15px;
+}
+
+.menu-end p{
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--orange);
+  color:white;
+
+  padding:14px 26px;
+
+  border-radius:999px;
+
+  font-weight:700;
+
+  transition:.25s;
+
+  box-shadow:0 0 30px rgba(217,90,26,.20);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+
+  right:22px;
+  bottom:22px;
+
+  z-index:1100;
+
+  background:#25D366;
+  color:white;
+
+  padding:14px 19px;
+
+  border-radius:999px;
+
+  font-weight:700;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#000;
+  color:#8f877f;
+
+  text-align:center;
+
+  padding:38px 20px;
+
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+
+/* CELULAR */
+
+@media(max-width:850px){
+
+  .top-nav{
+    padding:16px 5%;
+  }
+
+  .logo{
+    font-size:27px;
+  }
+
+  .nav-links{
+    gap:16px;
+  }
+
+  .nav-links a{
+    font-size:11px;
+  }
+
+  .menu-hero{
+    min-height:420px;
+    padding:120px 7% 60px;
+  }
+
+  .categories-wrapper{
+    top:61px;
+  }
+
+  .categories{
+    padding:13px 5%;
+  }
+
+  .menu-container{
+    padding:50px 4% 80px;
+  }
+
+  .menu-section{
+    margin-bottom:55px;
+  }
+
+  .menu-image{
+    border-radius:14px;
+  }
+
+  .whatsapp{
+    right:14px;
+    bottom:14px;
+    font-size:14px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/5493518762716"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp
+</a>
+
+
+<!-- NAVEGACIÓN -->
+
+<nav class="top-nav">
+
+<a class="logo" href="index.html">
+FINO
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">
+Inicio
+</a>
+
+<a class="active" href="carta.html">
+Carta
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- PORTADA -->
+
+<header class="menu-hero">
+
+<div class="menu-hero-content">
+
+<div class="eyebrow">
+FINO · Córdoba
+</div>
+
+<h1>
+CARTA
+</h1>
+
+<h2>
+Elegí, compartí y
+<em>quedate un rato más.</em>
+</h2>
+
+<p>
+Cafetería, cocina, cocktails y vinos para acompañar cada momento.
+</p>
+
+</div>
+
+</header>
+
+
+<!-- NAVEGACIÓN POR CATEGORÍAS -->
+
+<div class="categories-wrapper">
+
+<div class="categories">
+
+<a href="#cafeteria">Cafetería</a>
+<a href="#cafe">Café</a>
+<a href="#picar">Para picar</a>
+<a href="#compartir">Para compartir</a>
+<a href="#cocina">Cocina</a>
+<a href="#pizzas">Pizzas & Postres</a>
+<a href="#bebidas">Bebidas</a>
+<a href="#cocktails">Cocktails</a>
+<a href="#destilados">Destilados</a>
+<a href="#vinos">Vinos</a>
+<a href="#happy">Happy Hour</a>
+
+</div>
+
+</div>
+
+
+<!-- CARTA -->
+
+<main class="menu-container">
+
+
+<!-- CAFETERÍA -->
+
+<section class="menu-section" id="cafeteria">
+
+<div class="section-title">
+<span>Nuestra carta</span>
+<h2>Cafetería</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/03 Cafetería.png"
+alt="Carta de cafetería FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- CAFÉ -->
+
+<section class="menu-section" id="cafe">
+
+<div class="section-title">
+<span>FINO</span>
+<h2>Café</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/04 Café.png"
+alt="Carta de café FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- PARA PICAR -->
+
+<section class="menu-section" id="picar">
+
+<div class="section-title">
+<span>Para empezar</span>
+<h2>Para picar</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/05 Para picar.png"
+alt="Para picar FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- PARA COMPARTIR -->
+
+<section class="menu-section" id="compartir">
+
+<div class="section-title">
+<span>Al centro de la mesa</span>
+<h2>Para compartir</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/06 Para compartir.png"
+alt="Platos para compartir FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- COCINA -->
+
+<section class="menu-section" id="cocina">
+
+<div class="section-title">
+<span>Sabores FINO</span>
+<h2>Cocina</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/07 Cocina.png"
+alt="Cocina FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- PIZZAS Y POSTRES -->
+
+<section class="menu-section" id="pizzas">
+
+<div class="section-title">
+<span>Para disfrutar</span>
+<h2>Pizzas & Postres</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/08 Pizzas y postres.png"
+alt="Pizzas y postres FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- BEBIDAS -->
+
+<section class="menu-section" id="bebidas">
+
+<div class="section-title">
+<span>Para tomar</span>
+<h2>Bebidas & Cervezas</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/09 Sin alcohol y cervezas.png"
+alt="Bebidas y cervezas FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- COCKTAILS -->
+
+<section class="menu-section" id="cocktails">
+
+<div class="section-title">
+<span>Barra FINO</span>
+<h2>Cocktails</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/10 Cocktails.png"
+alt="Cocktails FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- DESTILADOS -->
+
+<section class="menu-section" id="destilados">
+
+<div class="section-title">
+<span>Nuestra barra</span>
+<h2>Destilados</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/11 Destilados.png"
+alt="Destilados FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- VINOS -->
+
+<section class="menu-section" id="vinos">
+
+<div class="section-title">
+<span>Para brindar</span>
+<h2>Vinos</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/12 Vinos.png"
+alt="Vinos FINO"
+loading="lazy">
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- HAPPY HOUR -->
+
+<section class="menu-section" id="happy">
+
+<div class="section-title">
+<span>FINO</span>
+<h2>Happy Hour</h2>
+</div>
+
+<img
+class="menu-image"
+src="menu/13 Happy hour.png"
+alt="Happy Hour FINO"
+loading="lazy">
+
+</section>
+
+
+</main>
+
+
+<!-- FINAL -->
+
+<div class="menu-end">
+
+<h2>
+Nos vemos en FINO.
+</h2>
+
+<p>
+Sarmiento 996 · Córdoba Capital
+</p>
+
+<a
+class="btn"
+href="https://wa.me/5493518762716"
+target="_blank">
+Reservar una mesa
+</a>
+
+</div>
+
+
+<footer>
+FINO · Un lugar de encuentro.
+</footer>
+
+
+</body>
+</html>
