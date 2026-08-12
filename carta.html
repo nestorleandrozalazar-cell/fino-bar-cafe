@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,6 +18,7 @@ content="Carta de FINO Bar Café. Gastronomía, cafetería, cocktails, vinos y b
   --orange:#d95a1a;
   --cream:#f5f1e8;
   --muted:#b9b1a7;
+  --dark:#101010;
 }
 
 *{
@@ -37,12 +39,14 @@ body{
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 
-/* NAVEGACIÓN SUPERIOR */
+/* =========================
+   NAVEGACIÓN
+========================= */
 
 .top-nav{
   position:fixed;
@@ -52,34 +56,33 @@ a{
   z-index:1000;
 
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 
   padding:18px 6%;
 
-  background:rgba(0,0,0,.88);
+  background:rgba(0,0,0,.90);
   backdrop-filter:blur(10px);
 
-  border-bottom:1px solid rgba(217,90,26,.18);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .logo{
   font-family:Georgia,"Times New Roman",serif;
-  color:var(--orange);
   font-size:30px;
-  line-height:1;
+  color:var(--orange);
 }
 
 .nav-links{
   display:flex;
-  align-items:center;
   gap:28px;
+  align-items:center;
 }
 
 .nav-links a{
   font-size:13px;
-  letter-spacing:.1em;
   text-transform:uppercase;
+  letter-spacing:.1em;
 }
 
 .nav-links a:hover{
@@ -92,69 +95,77 @@ a{
 }
 
 
-/* PORTADA CARTA */
+/* =========================
+   PORTADA
+========================= */
 
 .menu-hero{
-  min-height:500px;
-  padding:150px 7% 80px;
+  min-height:650px;
 
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
+
+  padding:130px 7% 80px;
 
   background:
-  radial-gradient(
-    circle at center,
-    rgba(217,90,26,.12),
-    transparent 50%
+  linear-gradient(
+    90deg,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.30)
   ),
-  #080808;
+  url("menu/sandwich-papas.jpg")
+  center/cover;
 }
 
 .menu-hero-content{
-  max-width:850px;
+  max-width:750px;
 }
 
 .eyebrow{
   color:var(--orange);
-  text-transform:uppercase;
-  letter-spacing:.22em;
   font-size:12px;
   font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.22em;
   margin-bottom:18px;
 }
 
 .menu-hero h1{
   font-family:Georgia,"Times New Roman",serif;
+
   color:var(--orange);
 
-  font-size:clamp(65px,10vw,125px);
-  font-weight:400;
+  font-size:clamp(70px,11vw,135px);
   line-height:.9;
+
+  font-weight:400;
 
   margin-bottom:25px;
 }
 
 .menu-hero h2{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(28px,4vw,48px);
+  font-size:clamp(30px,4vw,50px);
   font-weight:400;
-  margin-bottom:20px;
+  line-height:1.1;
+  margin-bottom:22px;
 }
 
 .menu-hero h2 em{
   color:var(--orange);
-  font-style:italic;
 }
 
 .menu-hero p{
-  color:var(--muted);
-  font-size:18px;
+  max-width:590px;
+  font-size:19px;
+  color:#ddd7cf;
 }
 
 
-/* CATEGORÍAS */
+/* =========================
+   CATEGORÍAS
+========================= */
 
 .categories-wrapper{
   position:sticky;
@@ -164,7 +175,6 @@ a{
   background:rgba(8,8,8,.96);
   backdrop-filter:blur(10px);
 
-  border-top:1px solid rgba(255,255,255,.05);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
@@ -175,9 +185,9 @@ a{
   display:flex;
   gap:10px;
 
-  overflow-x:auto;
+  padding:15px 6%;
 
-  padding:16px 6%;
+  overflow-x:auto;
 
   scrollbar-width:none;
 }
@@ -191,120 +201,395 @@ a{
 
   padding:9px 16px;
 
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.15);
+
   border-radius:999px;
 
-  color:#ddd5cb;
-
   font-size:12px;
+
   text-transform:uppercase;
   letter-spacing:.08em;
+
+  color:#ddd7cf;
 
   transition:.25s;
 }
 
 .categories a:hover{
-  color:white;
   border-color:var(--orange);
-  background:rgba(217,90,26,.12);
+  color:white;
+  background:rgba(217,90,26,.10);
 }
 
 
-/* CONTENIDO */
+/* =========================
+   INTRO
+========================= */
 
-.menu-container{
-  max-width:1150px;
+.intro{
+  max-width:1200px;
   margin:auto;
-  padding:70px 6% 110px;
-}
-
-.menu-section{
-  scroll-margin-top:150px;
-  margin-bottom:80px;
-}
-
-.section-title{
-  margin-bottom:25px;
+  padding:100px 7%;
   text-align:center;
 }
 
-.section-title span{
-  display:block;
-  color:var(--orange);
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  margin-bottom:8px;
-}
-
-.section-title h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:400;
-  font-size:clamp(34px,5vw,55px);
-  color:var(--cream);
-}
-
-
-/* IMÁGENES DE LA CARTA */
-
-.menu-image{
-  display:block;
-
-  width:100%;
-  max-width:900px;
-  height:auto;
-
-  margin:0 auto;
-
-  border-radius:22px;
-
-  border:1px solid rgba(255,255,255,.09);
-
-  box-shadow:
-  0 30px 80px rgba(0,0,0,.55),
-  0 0 0 1px rgba(217,90,26,.04);
-}
-
-
-/* SEPARADOR */
-
-.divider{
-  width:70px;
-  height:1px;
-  background:var(--orange);
-  opacity:.65;
-
-  margin:70px auto;
-}
-
-
-/* FINAL */
-
-.menu-end{
-  text-align:center;
-  padding:30px 20px 90px;
-}
-
-.menu-end h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:400;
-  font-size:clamp(35px,5vw,58px);
-  color:var(--orange);
+.intro .eyebrow{
   margin-bottom:15px;
 }
 
-.menu-end p{
-  color:var(--muted);
-  margin-bottom:28px;
+.intro h2{
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-size:clamp(40px,6vw,70px);
+
+  color:var(--orange);
+
+  font-weight:400;
+
+  margin-bottom:25px;
 }
+
+.intro p{
+  max-width:730px;
+  margin:auto;
+
+  color:var(--muted);
+
+  font-size:19px;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
+
+.photo-section{
+  max-width:1400px;
+
+  margin:auto;
+
+  padding:50px 7% 100px;
+}
+
+.photo-grid{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:22px;
+}
+
+.photo-card{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:26px;
+
+  min-height:520px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  background:#111;
+}
+
+.photo-card img{
+  width:100%;
+  height:100%;
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  object-fit:cover;
+
+  transition:.5s;
+}
+
+.photo-card:hover img{
+  transform:scale(1.025);
+}
+
+.photo-card::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.82),
+    rgba(0,0,0,.05) 55%
+  );
+}
+
+.photo-text{
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  z-index:5;
+
+  padding:35px;
+
+  width:100%;
+}
+
+.photo-text span{
+  color:var(--orange);
+
+  text-transform:uppercase;
+
+  letter-spacing:.18em;
+
+  font-size:11px;
+
+  font-weight:700;
+}
+
+.photo-text h3{
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-size:34px;
+
+  font-weight:400;
+
+  margin-top:8px;
+}
+
+.photo-large{
+  grid-column:1 / -1;
+
+  min-height:600px;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.menu{
+  background:#000;
+
+  border-top:1px solid rgba(217,90,26,.15);
+  border-bottom:1px solid rgba(217,90,26,.15);
+
+  padding:100px 7%;
+}
+
+.menu-inner{
+  max-width:1200px;
+  margin:auto;
+}
+
+.menu-heading{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.menu-heading h2{
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-size:clamp(45px,6vw,70px);
+
+  color:var(--orange);
+
+  font-weight:400;
+
+  margin-bottom:18px;
+}
+
+.menu-heading p{
+  color:var(--muted);
+  font-size:18px;
+}
+
+
+/* CATEGORÍAS CARTA */
+
+.menu-category{
+  scroll-margin-top:160px;
+
+  margin-bottom:75px;
+}
+
+.menu-category-title{
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  margin-bottom:35px;
+}
+
+.menu-category-title h3{
+  font-family:Georgia,"Times New Roman",serif;
+
+  color:var(--orange);
+
+  font-size:clamp(32px,4vw,48px);
+
+  font-weight:400;
+
+  white-space:nowrap;
+}
+
+.menu-category-title::after{
+  content:"";
+
+  width:100%;
+  height:1px;
+
+  background:rgba(217,90,26,.35);
+}
+
+
+/* PRODUCTOS */
+
+.menu-list{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:0 55px;
+}
+
+.menu-item{
+  padding:20px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.item-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  align-items:flex-start;
+}
+
+.item-name{
+  font-size:17px;
+
+  font-weight:700;
+
+  color:var(--cream);
+}
+
+.item-price{
+  color:var(--orange);
+
+  font-weight:700;
+
+  white-space:nowrap;
+}
+
+.item-description{
+  margin-top:6px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  max-width:90%;
+}
+
+
+/* AVISO */
+
+.menu-note{
+  margin-top:70px;
+
+  padding:24px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  border:1px solid rgba(217,90,26,.18);
+
+  border-radius:18px;
+}
+
+
+/* =========================
+   FOTO FINAL
+========================= */
+
+.final-photo{
+  min-height:650px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:80px 7%;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.82)
+  ),
+  url("menu/picada-fritos.png")
+  center/cover;
+}
+
+.final-content{
+  max-width:700px;
+}
+
+.final-content h2{
+  font-family:Georgia,"Times New Roman",serif;
+
+  color:white;
+
+  font-size:clamp(40px,6vw,70px);
+
+  line-height:1.05;
+
+  font-weight:400;
+
+  margin-bottom:20px;
+}
+
+.final-content h2 em{
+  color:var(--orange);
+}
+
+.final-content p{
+  font-size:18px;
+
+  color:#ddd6ce;
+
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
 
 .btn{
   display:inline-block;
+
   background:var(--orange);
+
   color:white;
 
-  padding:14px 26px;
+  padding:14px 27px;
 
   border-radius:999px;
 
@@ -320,7 +605,9 @@ a{
 }
 
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP
+========================= */
 
 .whatsapp{
   position:fixed;
@@ -328,9 +615,10 @@ a{
   right:22px;
   bottom:22px;
 
-  z-index:1100;
+  z-index:1500;
 
   background:#25D366;
+
   color:white;
 
   padding:14px 19px;
@@ -339,34 +627,33 @@ a{
 
   font-weight:700;
 
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  box-shadow:0 10px 30px rgba(0,0,0,.40);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#000;
+
   color:#8f877f;
 
   text-align:center;
 
   padding:38px 20px;
-
-  border-top:1px solid rgba(255,255,255,.06);
 }
 
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
 
 @media(max-width:850px){
 
   .top-nav{
     padding:16px 5%;
-  }
-
-  .logo{
-    font-size:27px;
   }
 
   .nav-links{
@@ -378,39 +665,75 @@ footer{
   }
 
   .menu-hero{
-    min-height:420px;
+    min-height:550px;
+
     padding:120px 7% 60px;
+
+    background-position:center;
   }
 
   .categories-wrapper{
-    top:61px;
+    top:62px;
   }
 
   .categories{
     padding:13px 5%;
   }
 
-  .menu-container{
-    padding:50px 4% 80px;
+  .intro{
+    padding:75px 6%;
   }
 
-  .menu-section{
-    margin-bottom:55px;
+  .photo-section{
+    padding:25px 5% 75px;
   }
 
-  .menu-image{
-    border-radius:14px;
+  .photo-grid{
+    grid-template-columns:1fr;
+  }
+
+  .photo-card,
+  .photo-large{
+    grid-column:auto;
+
+    min-height:470px;
+  }
+
+  .photo-text{
+    padding:25px;
+  }
+
+  .photo-text h3{
+    font-size:29px;
+  }
+
+  .menu{
+    padding:75px 6%;
+  }
+
+  .menu-list{
+    grid-template-columns:1fr;
+  }
+
+  .menu-category-title h3{
+    white-space:normal;
+  }
+
+  .final-photo{
+    min-height:550px;
   }
 
   .whatsapp{
     right:14px;
     bottom:14px;
+
     font-size:14px;
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -422,8 +745,7 @@ footer{
 <a
 class="whatsapp"
 href="https://wa.me/5493518762716"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 WhatsApp
 </a>
 
@@ -458,7 +780,7 @@ Carta
 <div class="menu-hero-content">
 
 <div class="eyebrow">
-FINO · Córdoba
+FINO · Córdoba Capital
 </div>
 
 <h1>
@@ -466,12 +788,12 @@ CARTA
 </h1>
 
 <h2>
-Elegí, compartí y
-<em>quedate un rato más.</em>
+La excusa es comer.
+<em>Lo que pasa alrededor es FINO.</em>
 </h2>
 
 <p>
-Cafetería, cocina, cocktails y vinos para acompañar cada momento.
+Una propuesta pensada para compartir, disfrutar y quedarse un rato más.
 </p>
 
 </div>
@@ -479,271 +801,515 @@ Cafetería, cocina, cocktails y vinos para acompañar cada momento.
 </header>
 
 
-<!-- NAVEGACIÓN POR CATEGORÍAS -->
+<!-- ACCESO RÁPIDO -->
 
 <div class="categories-wrapper">
 
 <div class="categories">
 
-<a href="#cafeteria">Cafetería</a>
-<a href="#cafe">Café</a>
-<a href="#picar">Para picar</a>
-<a href="#compartir">Para compartir</a>
-<a href="#cocina">Cocina</a>
-<a href="#pizzas">Pizzas & Postres</a>
-<a href="#bebidas">Bebidas</a>
-<a href="#cocktails">Cocktails</a>
-<a href="#destilados">Destilados</a>
-<a href="#vinos">Vinos</a>
-<a href="#happy">Happy Hour</a>
+<a href="#cafeteria">
+Cafetería
+</a>
+
+<a href="#picar">
+Para picar
+</a>
+
+<a href="#compartir">
+Para compartir
+</a>
+
+<a href="#cocina">
+Cocina
+</a>
+
+<a href="#pizzas">
+Pizzas
+</a>
+
+<a href="#bebidas">
+Bebidas
+</a>
+
+<a href="#cocktails">
+Cocktails
+</a>
+
+<a href="#vinos">
+Vinos
+</a>
 
 </div>
 
 </div>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<div class="eyebrow">
+Nuestra propuesta
+</div>
+
+<h2>
+Sabores que reúnen.
+</h2>
+
+<p>
+Desde el café de la mañana hasta una mesa llena por la noche.
+Una carta pensada para distintos momentos,
+pero siempre con la misma idea:
+compartir.
+</p>
+
+</section>
+
+
+<!-- GALERÍA -->
+
+<section class="photo-section">
+
+<div class="photo-grid">
+
+
+<!-- PAPAS -->
+
+<div class="photo-card">
+
+<img
+src="menu/papas-especiales.png"
+alt="Papas especiales FINO">
+
+<div class="photo-text">
+
+<span>
+Para compartir
+</span>
+
+<h3>
+Papas especiales
+</h3>
+
+</div>
+
+</div>
+
+
+<!-- DESAYUNO -->
+
+<div class="photo-card">
+
+<img
+src="menu/desayuno.png"
+alt="Desayuno FINO">
+
+<div class="photo-text">
+
+<span>
+Desde temprano
+</span>
+
+<h3>
+Desayunos FINO
+</h3>
+
+</div>
+
+</div>
+
+
+<!-- PICADA -->
+
+<div class="photo-card photo-large">
+
+<img
+src="menu/picada-fritos.png"
+alt="Picadas y fritos FINO">
+
+<div class="photo-text">
+
+<span>
+Al centro de la mesa
+</span>
+
+<h3>
+Picadas & fritos
+</h3>
+
+</div>
+
+</div>
+
+
+<!-- CROISSANT -->
+
+<div class="photo-card">
+
+<img
+src="menu/croissant.png"
+alt="Croissant FINO">
+
+<div class="photo-text">
+
+<span>
+Cafetería
+</span>
+
+<h3>
+Algo para acompañar
+</h3>
+
+</div>
+
+</div>
+
+
+<!-- SANDWICH -->
+
+<div class="photo-card">
+
+<img
+src="menu/sandwich-papas.jpg"
+alt="Sandwich con papas FINO">
+
+<div class="photo-text">
+
+<span>
+Cocina
+</span>
+
+<h3>
+Para cuando pinta comer
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
 
 
 <!-- CARTA -->
 
-<main class="menu-container">
+<section class="menu">
+
+<div class="menu-inner">
+
+
+<div class="menu-heading">
+
+<div class="eyebrow">
+FINO
+</div>
+
+<h2>
+Nuestra carta
+</h2>
+
+<p>
+Elegí tu momento.
+</p>
+
+</div>
 
 
 <!-- CAFETERÍA -->
 
-<section class="menu-section" id="cafeteria">
+<div class="menu-category" id="cafeteria">
 
-<div class="section-title">
-<span>Nuestra carta</span>
-<h2>Cafetería</h2>
+<div class="menu-category-title">
+
+<h3>
+Cafetería
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/03 Cafetería.png"
-alt="Carta de cafetería FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- CAFÉ -->
-
-<section class="menu-section" id="cafe">
-
-<div class="section-title">
-<span>FINO</span>
-<h2>Café</h2>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Café</div>
+<div class="item-price">$</div>
+</div>
 </div>
 
-<img
-class="menu-image"
-src="menu/04 Café.png"
-alt="Carta de café FINO"
-loading="lazy">
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Café con leche</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-</section>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Cappuccino</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Medialunas</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-<div class="divider"></div>
+</div>
+
+</div>
 
 
 <!-- PARA PICAR -->
 
-<section class="menu-section" id="picar">
+<div class="menu-category" id="picar">
 
-<div class="section-title">
-<span>Para empezar</span>
-<h2>Para picar</h2>
+<div class="menu-category-title">
+
+<h3>
+Para picar
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/05 Para picar.png"
-alt="Para picar FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- PARA COMPARTIR -->
-
-<section class="menu-section" id="compartir">
-
-<div class="section-title">
-<span>Al centro de la mesa</span>
-<h2>Para compartir</h2>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Papas fritas</div>
+<div class="item-price">$</div>
+</div>
 </div>
 
-<img
-class="menu-image"
-src="menu/06 Para compartir.png"
-alt="Platos para compartir FINO"
-loading="lazy">
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Papas especiales</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-</section>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Fritos</div>
+<div class="item-price">$</div>
+</div>
+</div>
+
+</div>
+
+</div>
 
 
-<div class="divider"></div>
+<!-- COMPARTIR -->
+
+<div class="menu-category" id="compartir">
+
+<div class="menu-category-title">
+
+<h3>
+Para compartir
+</h3>
+
+</div>
+
+<div class="menu-list">
+
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Picadas</div>
+<div class="item-price">$</div>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Tablas</div>
+<div class="item-price">$</div>
+</div>
+</div>
+
+</div>
+
+</div>
 
 
 <!-- COCINA -->
 
-<section class="menu-section" id="cocina">
+<div class="menu-category" id="cocina">
 
-<div class="section-title">
-<span>Sabores FINO</span>
-<h2>Cocina</h2>
+<div class="menu-category-title">
+
+<h3>
+Cocina
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/07 Cocina.png"
-alt="Cocina FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- PIZZAS Y POSTRES -->
-
-<section class="menu-section" id="pizzas">
-
-<div class="section-title">
-<span>Para disfrutar</span>
-<h2>Pizzas & Postres</h2>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Sandwiches</div>
+<div class="item-price">$</div>
+</div>
 </div>
 
-<img
-class="menu-image"
-src="menu/08 Pizzas y postres.png"
-alt="Pizzas y postres FINO"
-loading="lazy">
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Platos FINO</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-</section>
+</div>
+
+</div>
 
 
-<div class="divider"></div>
+<!-- PIZZAS -->
+
+<div class="menu-category" id="pizzas">
+
+<div class="menu-category-title">
+
+<h3>
+Pizzas
+</h3>
+
+</div>
+
+<div class="menu-list">
+
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Pizzas FINO</div>
+<div class="item-price">$</div>
+</div>
+</div>
+
+</div>
+
+</div>
 
 
 <!-- BEBIDAS -->
 
-<section class="menu-section" id="bebidas">
+<div class="menu-category" id="bebidas">
 
-<div class="section-title">
-<span>Para tomar</span>
-<h2>Bebidas & Cervezas</h2>
+<div class="menu-category-title">
+
+<h3>
+Bebidas
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/09 Sin alcohol y cervezas.png"
-alt="Bebidas y cervezas FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Bebidas sin alcohol</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Cervezas</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-<div class="divider"></div>
+</div>
+
+</div>
 
 
 <!-- COCKTAILS -->
 
-<section class="menu-section" id="cocktails">
+<div class="menu-category" id="cocktails">
 
-<div class="section-title">
-<span>Barra FINO</span>
-<h2>Cocktails</h2>
+<div class="menu-category-title">
+
+<h3>
+Cocktails
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/10 Cocktails.png"
-alt="Cocktails FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- DESTILADOS -->
-
-<section class="menu-section" id="destilados">
-
-<div class="section-title">
-<span>Nuestra barra</span>
-<h2>Destilados</h2>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Cocktails clásicos</div>
+<div class="item-price">$</div>
+</div>
 </div>
 
-<img
-class="menu-image"
-src="menu/11 Destilados.png"
-alt="Destilados FINO"
-loading="lazy">
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Cocktails FINO</div>
+<div class="item-price">$</div>
+</div>
+</div>
 
-</section>
+</div>
 
-
-<div class="divider"></div>
+</div>
 
 
 <!-- VINOS -->
 
-<section class="menu-section" id="vinos">
+<div class="menu-category" id="vinos">
 
-<div class="section-title">
-<span>Para brindar</span>
-<h2>Vinos</h2>
+<div class="menu-category-title">
+
+<h3>
+Vinos
+</h3>
+
 </div>
 
-<img
-class="menu-image"
-src="menu/12 Vinos.png"
-alt="Vinos FINO"
-loading="lazy">
+<div class="menu-list">
 
-</section>
-
-
-<div class="divider"></div>
-
-
-<!-- HAPPY HOUR -->
-
-<section class="menu-section" id="happy">
-
-<div class="section-title">
-<span>FINO</span>
-<h2>Happy Hour</h2>
+<div class="menu-item">
+<div class="item-top">
+<div class="item-name">Vinos seleccionados</div>
+<div class="item-price">$</div>
+</div>
 </div>
 
-<img
-class="menu-image"
-src="menu/13 Happy hour.png"
-alt="Happy Hour FINO"
-loading="lazy">
+</div>
+
+</div>
+
+
+<div class="menu-note">
+
+Los precios y productos pueden actualizarse según disponibilidad.
+
+</div>
+
+
+</div>
 
 </section>
-
-
-</main>
 
 
 <!-- FINAL -->
 
-<div class="menu-end">
+<section class="final-photo">
+
+<div class="final-content">
 
 <h2>
-Nos vemos en FINO.
+Comida al centro.
+<br>
+<em>Amigos alrededor.</em>
 </h2>
 
 <p>
@@ -759,6 +1325,8 @@ Reservar una mesa
 
 </div>
 
+</section>
+
 
 <footer>
 FINO · Un lugar de encuentro.
@@ -766,4 +1334,5 @@ FINO · Un lugar de encuentro.
 
 
 </body>
+
 </html>
