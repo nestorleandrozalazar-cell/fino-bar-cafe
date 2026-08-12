@@ -9,17 +9,18 @@
 <title>Carta | FINO</title>
 
 <meta name="description"
-content="Carta completa de FINO Bar Café en Córdoba Capital. Cafetería, cocina, pizzas, cocktails, cervezas, vinos y más.">
+content="Carta completa de FINO Bar Café en Córdoba Capital.">
 
 <style>
 
 :root{
   --black:#080808;
-  --dark:#101010;
-  --orange:#d95a1a;
+  --dark:#121011;
+  --green:#0c2619;
+  --orange:#e84317;
   --cream:#f5f1e8;
-  --muted:#a9a29a;
-  --line:rgba(255,255,255,.11);
+  --muted:#99938c;
+  --line:rgba(255,255,255,.22);
 }
 
 *{
@@ -36,7 +37,7 @@ body{
   font-family:Arial,Helvetica,sans-serif;
   background:var(--black);
   color:var(--cream);
-  line-height:1.6;
+  line-height:1.55;
 }
 
 a{
@@ -45,9 +46,7 @@ a{
 }
 
 
-/* =========================
-   NAVEGACIÓN
-========================= */
+/* TOP */
 
 .top-nav{
   position:fixed;
@@ -65,302 +64,164 @@ a{
   background:rgba(0,0,0,.92);
   backdrop-filter:blur(10px);
 
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-  font-family:Georgia,"Times New Roman",serif;
   color:var(--orange);
-  font-size:31px;
+  font-size:28px;
+  font-weight:700;
 }
 
 .nav-links{
   display:flex;
-  gap:28px;
-  align-items:center;
+  gap:25px;
 }
 
 .nav-links a{
-  font-size:13px;
+  font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
 }
 
-.nav-links a:hover{
-  color:var(--orange);
-}
-
 .nav-links .active{
   color:var(--orange);
-  font-weight:700;
 }
 
 
-/* =========================
-   PORTADA
-========================= */
+/* PORTADA */
 
 .hero{
-  min-height:720px;
+  min-height:630px;
+  padding:130px 7% 70px;
 
   display:flex;
   align-items:center;
   justify-content:center;
-
-  padding:140px 7% 80px;
-
   text-align:center;
 
   background:
-  radial-gradient(
-    circle at 50% 45%,
-    rgba(217,90,26,.17),
-    rgba(217,90,26,.04) 32%,
-    transparent 62%
-  ),
-  linear-gradient(
-    180deg,
-    #111 0%,
-    #080808 65%,
-    #050505 100%
-  );
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.eyebrow{
-  color:var(--orange);
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  font-size:12px;
-  font-weight:700;
-  margin-bottom:17px;
+  radial-gradient(circle at center,rgba(232,67,23,.17),transparent 50%),
+  #101010;
 }
 
 .hero h1{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(80px,13vw,155px);
-  color:var(--orange);
+  font-size:clamp(75px,12vw,145px);
   font-weight:400;
-  line-height:.85;
-  margin-bottom:30px;
-}
-
-.hero h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(31px,4.5vw,54px);
-  font-weight:400;
-  line-height:1.08;
-  margin-bottom:22px;
-}
-
-.hero h2 em{
   color:var(--orange);
 }
 
 .hero p{
-  max-width:620px;
-  margin:auto;
-  color:#ded8cf;
+  margin-top:25px;
+  color:#ccc4ba;
   font-size:19px;
 }
 
 
-/* =========================
-   NAVEGACIÓN CARTA
-========================= */
+/* CATEGORY BAR */
 
 .category-nav{
   position:sticky;
-  top:68px;
+  top:65px;
   z-index:900;
 
   background:rgba(8,8,8,.97);
-  backdrop-filter:blur(10px);
-
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .category-inner{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+
   max-width:1450px;
   margin:auto;
 
-  display:flex;
-  gap:10px;
-
-  padding:15px 5%;
-
-  overflow-x:auto;
-  scrollbar-width:none;
-}
-
-.category-inner::-webkit-scrollbar{
-  display:none;
+  padding:14px 5%;
 }
 
 .category-inner a{
   flex:none;
-
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.18);
   border-radius:999px;
 
-  padding:9px 15px;
+  padding:8px 15px;
 
+  font-size:11px;
   text-transform:uppercase;
   letter-spacing:.07em;
-  font-size:11px;
-
-  color:#ddd7cf;
-
-  transition:.25s;
-}
-
-.category-inner a:hover{
-  color:#fff;
-  border-color:var(--orange);
-  background:rgba(217,90,26,.12);
 }
 
 
-/* =========================
-   INTRO
-========================= */
+/* FOTO */
 
-.intro{
-  max-width:1100px;
-  margin:auto;
-  padding:95px 7% 65px;
-  text-align:center;
-}
-
-.intro h2{
-  font-family:Georgia,"Times New Roman",serif;
-  color:var(--orange);
-  font-size:clamp(42px,6vw,70px);
-  font-weight:400;
-  margin-bottom:20px;
-}
-
-.intro p{
-  max-width:700px;
-  margin:auto;
-  color:var(--muted);
-  font-size:18px;
-}
-
-
-/* =========================
-   IMÁGENES
-========================= */
-
-.feature-photo{
-  max-width:1200px;
-  margin:0 auto 90px;
+.menu-photo{
+  max-width:1150px;
+  margin:80px auto;
   padding:0 6%;
 }
 
-.feature-photo img{
-  display:block;
+.menu-photo img{
   width:100%;
-  height:560px;
+  height:550px;
   object-fit:cover;
-  border-radius:28px;
-
-  border:1px solid rgba(255,255,255,.08);
-
-  box-shadow:0 30px 80px rgba(0,0,0,.45);
-}
-
-.photo-break{
-  max-width:1250px;
-  margin:0 auto 100px;
-  padding:0 6%;
-}
-
-.photo-break-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.photo-break img{
   display:block;
-  width:100%;
-  height:500px;
-  object-fit:cover;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.08);
+  border-radius:25px;
 }
 
-.single-photo{
+
+/* CARTA */
+
+.menu-page{
   max-width:1250px;
-  margin:0 auto 100px;
-  padding:0 6%;
+  margin:0 auto;
+  padding:85px 6%;
+
+  scroll-margin-top:150px;
 }
 
-.single-photo img{
-  display:block;
-  width:100%;
-  height:570px;
-  object-fit:cover;
-  border-radius:26px;
-  border:1px solid rgba(255,255,255,.08);
+.dark-page{
+  background:#121011;
+  max-width:none;
 }
 
+.green-page{
+  background:var(--green);
+  max-width:none;
+}
 
-/* =========================
-   CARTA
-========================= */
-
-.menu{
-  max-width:1250px;
+.page-inner{
+  max-width:1150px;
   margin:auto;
-  padding:20px 6% 100px;
 }
 
-.menu-section{
-  scroll-margin-top:155px;
-  margin-bottom:100px;
+.page-title{
+  border-top:1px solid rgba(255,255,255,.30);
+  padding-top:55px;
+  margin-bottom:45px;
 }
 
-.section-heading{
-  display:flex;
-  align-items:center;
-  gap:22px;
-  margin-bottom:38px;
-}
-
-.section-heading h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(38px,5vw,58px);
+.page-title small{
   color:var(--orange);
-  font-weight:400;
-  white-space:nowrap;
-}
-
-.section-heading::after{
-  content:"";
-  height:1px;
-  width:100%;
-  background:rgba(217,90,26,.35);
-}
-
-.subheading{
-  color:var(--orange);
+  font-weight:700;
   text-transform:uppercase;
-  letter-spacing:.12em;
+}
+
+.page-title h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(43px,6vw,70px);
+  font-weight:400;
+  margin-top:25px;
+}
+
+.group-title{
+  color:var(--orange);
   font-size:13px;
   font-weight:700;
-  margin:35px 0 8px;
-}
-
-.subheading-note{
-  color:var(--muted);
-  font-size:12px;
-  font-style:italic;
+  text-transform:uppercase;
+  margin:32px 0 10px;
 }
 
 .menu-grid{
@@ -369,295 +230,144 @@ a{
   gap:0 55px;
 }
 
-.menu-item{
-  padding:18px 0;
-  border-bottom:1px solid var(--line);
+.item{
+  padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.25);
 }
 
-.item-top{
+.item-row{
   display:flex;
   justify-content:space-between;
   gap:20px;
-  align-items:flex-start;
 }
 
-.item-name{
+.name{
   font-size:16px;
-  font-weight:500;
-  color:var(--cream);
 }
 
-.item-name.highlight{
-  color:var(--orange);
-}
-
-.item-price{
-  color:var(--cream);
+.price{
   font-size:17px;
   white-space:nowrap;
 }
 
-.item-desc{
+.description{
   color:var(--muted);
   font-size:13px;
-  line-height:1.55;
   margin-top:6px;
-  max-width:92%;
+}
+
+.highlight{
+  color:var(--orange);
 }
 
 
-/* =========================
-   HAPPY HOUR
-========================= */
+/* HAPPY */
 
 .happy{
-  scroll-margin-top:150px;
   background:var(--orange);
-  color:#fff;
   padding:100px 7%;
 }
 
 .happy-inner{
-  max-width:1100px;
+  max-width:1050px;
   margin:auto;
-}
-
-.happy .eyebrow{
-  color:#fff;
 }
 
 .happy h2{
   font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(55px,8vw,95px);
   font-weight:400;
-  margin-bottom:10px;
-}
-
-.happy-time{
-  text-transform:uppercase;
-  font-weight:700;
-  font-size:12px;
-  letter-spacing:.1em;
-  margin-bottom:45px;
+  margin:25px 0 60px;
 }
 
 .happy-item{
   display:flex;
   justify-content:space-between;
-  gap:25px;
-
-  padding:21px 0;
-
-  border-top:1px solid rgba(255,255,255,.45);
-
-  font-size:23px;
+  font-size:24px;
+  padding:20px 0;
+  border-top:1px solid rgba(255,255,255,.55);
 }
 
 
-/* =========================
-   FINAL
-========================= */
+/* FINAL */
 
 .final{
-  min-height:650px;
-
+  min-height:620px;
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
 
-  padding:90px 7%;
-
   background:
-  linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.82)
-  ),
-  url("menu/sandwich-papas.jpg")
-  center/cover;
-}
+  linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.82)),
+  url("menu/sandwich-papas.jpg") center/cover;
 
-.final-content{
-  max-width:750px;
+  padding:80px 7%;
 }
 
 .final h2{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(42px,6vw,70px);
-  font-weight:400;
-  line-height:1.08;
-  margin-bottom:20px;
+  font-size:clamp(38px,6vw,66px);
 }
 
-.final h2 em{
+.final em{
   color:var(--orange);
-}
-
-.final p{
-  color:#ddd7ce;
-  font-size:18px;
-  margin-bottom:28px;
 }
 
 .btn{
   display:inline-block;
-
-  padding:14px 27px;
-
+  margin-top:25px;
   background:var(--orange);
-  color:white;
-
+  padding:14px 26px;
   border-radius:999px;
-
   font-weight:700;
-
-  transition:.25s;
-
-  box-shadow:0 0 30px rgba(217,90,26,.22);
 }
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
 
 .whatsapp{
   position:fixed;
-
-  right:22px;
-  bottom:22px;
-
-  z-index:1500;
-
+  right:18px;
+  bottom:18px;
+  z-index:1200;
   background:#25D366;
-  color:#fff;
-
-  padding:14px 19px;
-
+  padding:13px 18px;
   border-radius:999px;
-
   font-weight:700;
-
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
   background:#000;
   text-align:center;
-  color:#8f877f;
-  padding:38px 20px;
+  color:#8e8881;
+  padding:35px;
 }
 
 
-/* =========================
-   CELULAR
-========================= */
+/* MOBILE */
 
 @media(max-width:850px){
-
-  .top-nav{
-    padding:16px 5%;
-  }
-
-  .nav-links{
-    gap:15px;
-  }
-
-  .nav-links a{
-    font-size:11px;
-  }
-
-  .hero{
-    min-height:610px;
-    padding:120px 7% 60px;
-  }
-
-  .category-nav{
-    top:62px;
-  }
-
-  .category-inner{
-    padding:12px 5%;
-  }
-
-  .intro{
-    padding:70px 6% 55px;
-  }
-
-  .feature-photo{
-    padding:0 5%;
-    margin-bottom:65px;
-  }
-
-  .feature-photo img{
-    height:430px;
-    border-radius:20px;
-  }
-
-  .menu{
-    padding:10px 6% 70px;
-  }
-
-  .menu-section{
-    margin-bottom:75px;
-  }
-
-  .section-heading h2{
-    white-space:normal;
-  }
 
   .menu-grid{
     grid-template-columns:1fr;
   }
 
-  .photo-break{
-    padding:0 5%;
-    margin-bottom:70px;
-  }
-
-  .photo-break-grid{
-    grid-template-columns:1fr;
-  }
-
-  .photo-break img{
+  .menu-photo img{
     height:430px;
   }
 
-  .single-photo{
-    padding:0 5%;
-    margin-bottom:70px;
+  .top-nav{
+    padding:16px 5%;
   }
 
-  .single-photo img{
-    height:450px;
+  .category-nav{
+    top:61px;
   }
 
-  .happy{
-    padding:75px 7%;
+  .menu-page{
+    padding:65px 6%;
   }
 
   .happy-item{
     font-size:18px;
-  }
-
-  .final{
-    min-height:550px;
-  }
-
-  .whatsapp{
-    right:14px;
-    bottom:14px;
-    font-size:14px;
   }
 
 }
@@ -670,66 +380,37 @@ footer{
 <body>
 
 
-<!-- WHATSAPP -->
-
-<a
-class="whatsapp"
+<a class="whatsapp"
 href="https://wa.me/5493518762716"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 WhatsApp
 </a>
 
 
-<!-- NAVEGACIÓN -->
-
 <nav class="top-nav">
 
-<a class="logo" href="index.html">
-FINO
-</a>
+<a class="logo" href="index.html">FINO</a>
 
 <div class="nav-links">
-
-<a href="index.html">
-Inicio
-</a>
-
-<a class="active" href="carta.html">
-Carta
-</a>
-
+<a href="index.html">Inicio</a>
+<a href="carta.html" class="active">Carta</a>
 </div>
 
 </nav>
 
 
-<!-- =========================
-     PORTADA
-========================= -->
-
 <header class="hero">
 
-<div class="hero-content">
+<div>
 
-<div class="eyebrow">
-FINO · Córdoba Capital
+<div style="color:#e84317;font-size:12px;font-weight:700;letter-spacing:.2em;">
+FINO · CÓRDOBA
 </div>
 
-<h1>
-CARTA
-</h1>
-
-<h2>
-La excusa es comer.
-<br>
-<em>Lo que pasa alrededor es FINO.</em>
-</h2>
+<h1>CARTA</h1>
 
 <p>
-Desde el café de la mañana hasta la última copa.
-Una propuesta pensada para compartir,
-disfrutar y quedarse un rato más.
+Una carta para cada momento del día.
 </p>
 
 </div>
@@ -737,15 +418,13 @@ disfrutar y quedarse un rato más.
 </header>
 
 
-<!-- NAVEGACIÓN DE CATEGORÍAS -->
-
 <div class="category-nav">
 
 <div class="category-inner">
 
 <a href="#cafeteria">Cafetería</a>
 <a href="#cafe">Café</a>
-<a href="#entradas">Para picar</a>
+<a href="#entradas">Entradas</a>
 <a href="#tablas">Tablas</a>
 <a href="#cocina">Cocina</a>
 <a href="#pizzas">Pizzas</a>
@@ -761,31 +440,9 @@ disfrutar y quedarse un rato más.
 </div>
 
 
-<!-- INTRO -->
+<!-- FOTO DESAYUNO -->
 
-<section class="intro">
-
-<div class="eyebrow">
-Nuestra propuesta
-</div>
-
-<h2>
-Sabores que reúnen.
-</h2>
-
-<p>
-Desayunos, comidas, platos para compartir,
-cocktails y vinos para acompañar cada momento.
-</p>
-
-</section>
-
-
-<!-- =========================
-     IMAGEN 1: DESAYUNO
-========================= -->
-
-<div class="feature-photo">
+<div class="menu-photo">
 
 <img
 src="menu/desayuno.png"
@@ -794,174 +451,89 @@ alt="Desayuno FINO">
 </div>
 
 
-<!-- =========================
-     CAFETERÍA
-========================= -->
+<!-- CAFETERÍA -->
 
-<main class="menu">
+<section class="menu-page" id="cafeteria">
 
-<section class="menu-section" id="cafeteria">
+<div class="page-inner">
 
-<div class="section-heading">
+<div class="page-title">
+<small>01 — Cafetería</small>
 <h2>Cafetería</h2>
 </div>
 
-
-<div class="subheading">
-Combos
-</div>
-
 <div class="menu-grid">
 
+<div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Simple</div>
-<div class="item-price">$5.000</div>
-</div>
-<div class="item-desc">
-Infusión + 1 medialuna o 2 criollos y queso untable
-</div>
+<div class="group-title">Combos</div>
+
+<div class="item">
+<div class="item-row"><span class="name">SIMPLE</span><span class="price">$5.000</span></div>
+<div class="description">Infusión + 1 medialuna o 2 criollos y queso untable</div>
 </div>
 
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Completo</div>
-<div class="item-price">$10.500</div>
-</div>
-<div class="item-desc">
-Infusión + jugo de naranja, 2 tostadas, jamón cocido,
-queso tybo, huevo revuelto y queso untable
-</div>
+<div class="item">
+<div class="item-row"><span class="name">COMPLETO</span><span class="price">$10.500</span></div>
+<div class="description">Infusión + jugo de naranja, 2 tostadas, jamón cocido, queso tybo, huevo revuelto y queso untable</div>
 </div>
 
+<div class="item">
+<div class="item-row"><span class="name">LIGHT</span><span class="price">$7.500</span></div>
+<div class="description">Infusión + jugo de naranja, 2 tostadas con mermelada y queso untable</div>
+</div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Light</div>
-<div class="item-price">$7.500</div>
-</div>
-<div class="item-desc">
-Infusión + jugo de naranja, 2 tostadas con mermelada
-y queso untable
-</div>
+<div class="item">
+<div class="item-row"><span class="name highlight">FINO</span><span class="price">$9.000</span></div>
+<div class="description">Tostado de jamón y queso con papas copetín y licuado de banana</div>
 </div>
 
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name highlight">FINO</div>
-<div class="item-price">$9.000</div>
-</div>
-<div class="item-desc">
-Tostado de jamón y queso con papas copetín
-y licuado de banana
-</div>
-</div>
+<div class="group-title">De panadería</div>
+
+<div class="item"><div class="item-row"><span>MAFALDA DE JAMÓN Y QUESO</span><span>$3.000</span></div></div>
+<div class="item"><div class="item-row"><span>MEDIALUNA</span><span>$1.800</span></div></div>
+<div class="item"><div class="item-row"><span>CRIOLLOS (x2)</span><span>$1.200</span></div></div>
 
 </div>
 
 
-<div class="subheading">
-De panadería
+<div>
+
+<div class="group-title">Brunch</div>
+
+<div class="item">
+<div class="item-row"><span>MEDITERRÁNEO</span><span>$12.900</span></div>
+<div class="description">Jamón crudo, queso, rúcula fresca y queso rallado en nuestro pan francés. Acompañados de papas copetín</div>
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Mafalda de jamón y queso</div>
-<div class="item-price">$3.000</div>
-</div>
+<div class="item">
+<div class="item-row"><span>CAPRESE</span><span>$9.500</span></div>
+<div class="description">Cherrys confitados y queso pategras c/aderezo pesto en nuestro pan francés. Acompañados de papas copetín</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Medialuna</div>
-<div class="item-price">$1.800</div>
-</div>
+<div class="item">
+<div class="item-row"><span>CHIPÁ CLÁSICO</span><span>$6.000</span></div>
+<div class="description">Jamón y queso. Acompañados de papas copetín</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Criollos (x2)</div>
-<div class="item-price">$1.200</div>
+<div class="item">
+<div class="item-row"><span>CHIPÁ MEDITERRÁNEO</span><span>$8.000</span></div>
+<div class="description">Jamón crudo, rúcula, oliva y queso rallado. Acompañados de papas copetín</div>
 </div>
+
+<div class="item">
+<div class="item-row"><span>CHIPÁ DE LA CASA</span><span>$7.000</span></div>
+<div class="description">Tomates confitados, muzzarella y pesto. Acompañados de papas copetín</div>
+</div>
+
+<div class="item">
+<div class="item-row"><span>CARLITOS</span><span>$5.000</span></div>
+<div class="description">Pan de miga, jamón, queso y mayonesa casera. Acompañado de papas copetín</div>
 </div>
 
 </div>
 
-
-<div class="subheading">
-Brunch
-</div>
-
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Mediterráneo</div>
-<div class="item-price">$12.900</div>
-</div>
-<div class="item-desc">
-Jamón crudo, queso, rúcula fresca y queso rallado
-en nuestro pan francés. Acompañados de papas copetín
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Caprese</div>
-<div class="item-price">$9.500</div>
-</div>
-<div class="item-desc">
-Cherrys confitados y queso pategras c/aderezo pesto
-en nuestro pan francés. Acompañados de papas copetín
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Chipá clásico</div>
-<div class="item-price">$6.000</div>
-</div>
-<div class="item-desc">
-Jamón y queso. Acompañados de papas copetín
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Chipá mediterráneo</div>
-<div class="item-price">$8.000</div>
-</div>
-<div class="item-desc">
-Jamón crudo, rúcula, oliva y queso rallado.
-Acompañados de papas copetín
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Chipá de la casa</div>
-<div class="item-price">$7.000</div>
-</div>
-<div class="item-desc">
-Tomates confitados, muzzarella y pesto.
-Acompañados de papas copetín
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Carlitos</div>
-<div class="item-price">$5.000</div>
-</div>
-<div class="item-desc">
-Pan de miga, jamón, queso y mayonesa casera.
-Acompañado de papas copetín
-</div>
 </div>
 
 </div>
@@ -969,350 +541,255 @@ Acompañado de papas copetín
 </section>
 
 
-<!-- =========================
-     CAFÉ
-========================= -->
+<!-- FOTO CROISSANT -->
 
-<section class="menu-section" id="cafe">
+<div class="menu-photo">
 
-<div class="section-heading">
+<img src="menu/croissant.png" alt="Croissant FINO">
+
+</div>
+
+
+<!-- CAFÉ -->
+
+<section class="menu-page" id="cafe">
+
+<div class="page-inner">
+
+<div class="page-title">
+<small>02 — Café</small>
 <h2>Café</h2>
 </div>
 
-<div class="subheading">
-Calientes
-</div>
-
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Espresso</div><div class="item-price">$2.500</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Lungo</div><div class="item-price">$2.800</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Cortado</div><div class="item-price">$3.500</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Cortado doble</div><div class="item-price">$4.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Café doble</div><div class="item-price">$4.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Latte</div><div class="item-price">$4.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Flat White</div><div class="item-price">$4.800</div></div></div>
+<div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Latte saborizado</div><div class="item-price">$4.800</div></div>
-<div class="item-desc">Vainilla, caramelo o pistacho</div>
+<div class="group-title">Calientes</div>
+
+<div class="item"><div class="item-row"><span>ESPRESSO</span><span>$2.500</span></div></div>
+<div class="item"><div class="item-row"><span>LUNGO</span><span>$2.800</span></div></div>
+<div class="item"><div class="item-row"><span>CORTADO</span><span>$3.500</span></div></div>
+<div class="item"><div class="item-row"><span>CORTADO DOBLE</span><span>$4.000</span></div></div>
+<div class="item"><div class="item-row"><span>CAFÉ DOBLE</span><span>$4.000</span></div></div>
+<div class="item"><div class="item-row"><span>LATTE</span><span>$4.000</span></div></div>
+<div class="item"><div class="item-row"><span>FLAT WHITE</span><span>$4.800</span></div></div>
+
+<div class="item">
+<div class="item-row"><span>LATTE SABORIZADO</span><span>$4.800</span></div>
+<div class="description">Vainilla, caramelo o pistacho</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name highlight">Café irlandés</div><div class="item-price">$10.000</div></div>
-<div class="item-desc">Espresso, whisky y crema espumosa</div>
+<div class="item">
+<div class="item-row"><span class="highlight">CAFÉ IRLANDÉS</span><span>$10.000</span></div>
+<div class="description">Espresso, whisky y crema espumosa</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name highlight">Café escocés</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">Helado de vainilla, whisky y un shot de espresso</div>
+<div class="item">
+<div class="item-row"><span class="highlight">CAFÉ ESCOCÉS</span><span>$12.000</span></div>
+<div class="description">Helado de vainilla, whisky y un shot de espresso</div>
 </div>
 
 </div>
 
 
-<div class="subheading">
-Fríos
+<div>
+
+<div class="group-title">Fríos</div>
+
+<div class="item"><div class="item-row"><span>JUGO DE NARANJA</span><span>$3.500</span></div></div>
+<div class="item"><div class="item-row"><span>ICE LATTE</span><span>$4.000</span></div></div>
+<div class="item"><div class="item-row"><span>LICUADO DE BANANA</span><span>$5.500</span></div></div>
+<div class="item"><div class="item-row"><span>LICUADO DE FRUTILLA</span><span>$5.500</span></div></div>
+
+<div class="item">
+<div class="item-row"><span>FRAPPUCCINO</span><span>$5.900</span></div>
+<div class="description">Clásico, vainilla, caramelo o pistacho</div>
 </div>
 
-<div class="menu-grid">
+</div>
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Jugo de naranja</div><div class="item-price">$3.500</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Ice Latte</div><div class="item-price">$4.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Licuado de banana</div><div class="item-price">$5.500</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Licuado de frutilla</div><div class="item-price">$5.500</div></div></div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Frappuccino</div><div class="item-price">$5.900</div></div>
-<div class="item-desc">Clásico, vainilla, caramelo o pistacho</div>
 </div>
 
 </div>
 
 </section>
 
-</main>
 
+<!-- FOTO PAPAS -->
 
-<!-- =========================
-     IMAGEN 2: CROISSANT
-     IMAGEN 3: PAPAS
-========================= -->
-
-<div class="photo-break">
-
-<div class="photo-break-grid">
-
-<img
-src="menu/croissant.png"
-alt="Croissant FINO">
-
-<img
-src="menu/papas-especiales.png"
-alt="Papas especiales FINO">
-
-</div>
-
+<div class="menu-photo">
+<img src="menu/papas-especiales.png" alt="Papas especiales FINO">
 </div>
 
 
-<main class="menu">
+<!-- ENTRADAS -->
 
+<section class="menu-page dark-page" id="entradas">
 
-<!-- =========================
-     ENTRADAS
-========================= -->
+<div class="page-inner">
 
-<section class="menu-section" id="entradas">
-
-<div class="section-heading">
+<div class="page-title">
+<small>03 — Para picar</small>
 <h2>Entradas</h2>
 </div>
 
-<div class="subheading">
-Papas
-</div>
+<div class="group-title">Papas</div>
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Clásicas</div>
-<div class="item-price">$9.000</div>
-</div>
+<div class="item"><div class="item-row"><span>CLÁSICAS</span><span>$9.000</span></div></div>
+
+<div class="item">
+<div class="item-row"><span>EXPLOSIVAS</span><span>$14.500</span></div>
+<div class="description">400g de papas fritas con cheddar fundido, bacon y verdeo</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Explosivas</div>
-<div class="item-price">$14.500</div>
-</div>
-<div class="item-desc">
-400 g de papas fritas con cheddar fundido, bacon y verdeo
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name highlight">Finas</div>
-<div class="item-price">$15.500</div>
-</div>
-<div class="item-desc">
-400 g de papas fritas con 2 huevos fritos a caballo,
-jamón y queso crema
-</div>
+<div class="item">
+<div class="item-row"><span class="highlight">FINAS</span><span>$15.500</span></div>
+<div class="description">400g de papas fritas con 2 huevos fritos a caballo, jamón y queso crema</div>
 </div>
 
 </div>
 
 
-<div class="subheading">
-Especiales
-</div>
+<div class="group-title">Especiales</div>
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Empanaditas fritas de carne</div>
-<div class="item-price">$2.800</div>
-</div>
-<div class="item-desc">Porción por dos</div>
+<div class="item">
+<div class="item-row"><span>EMPANADITAS FRITAS DE CARNE</span><span>$2.800</span></div>
+<div class="description">Porción por dos</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Bastones de muzzarella</div>
-<div class="item-price">$13.500</div>
-</div>
-<div class="item-desc">
-400 g, con salsa yasgua y alioli
-</div>
+<div class="item">
+<div class="item-row"><span>BASTONES DE MUZZARELLA</span><span>$13.500</span></div>
+<div class="description">400 g, con salsa yasgua y alioli</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Nuggets de pollo</div>
-<div class="item-price">$13.500</div>
-</div>
-<div class="item-desc">
-400 g, con salsa yasgua y alioli
-</div>
+<div class="item">
+<div class="item-row"><span>NUGGETS DE POLLO</span><span>$13.500</span></div>
+<div class="description">400 g, con salsa yasgua y alioli</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Rabas</div>
-<div class="item-price">Consultar</div>
+<div class="item">
+<div class="item-row"><span>RABAS</span><span>$ -----</span></div>
+<div class="description">Con papas fritas, salsa picante y alioli</div>
 </div>
-<div class="item-desc">
-Con papas fritas, salsa picante y alioli
-</div>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- FOTO PICADA -->
+
+<div class="menu-photo">
+<img src="menu/picada-fritos.png" alt="Picada FINO">
+</div>
 
 
 <!-- TABLAS -->
 
-<section class="menu-section" id="tablas">
+<section class="menu-page green-page" id="tablas">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>04 — Para compartir</small>
 <h2>Las tablas</h2>
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tabla fría</div>
-<div class="item-price">$31.000</div>
-</div>
-<div class="item-desc">
-Salame, jamón crudo, jamón cocido, queso,
-aceitunas y rodajas de pan caliente a las hierbas
-</div>
+<div class="item">
+<div class="item-row"><span class="name">TABLA FRÍA</span><span class="price highlight">$31.000</span></div>
+<div class="description">Salame, jamón crudo, jamón cocido, queso, aceitunas y rodajas de pan caliente a las hierbas.</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tabla caliente</div>
-<div class="item-price">$29.900</div>
-</div>
-<div class="item-desc">
-Ravioles de carne desmechada fritos, albondiguitas,
-arancinis al ragú, bastones de muzzarella,
-nugget de pollo, empanadas de carne fritas y papas fritas
-</div>
+<div class="item">
+<div class="item-row"><span class="name">TABLA CALIENTE</span><span class="price highlight">$29.900</span></div>
+<div class="description">Ravioles de carne desmechada fritos, albondiguitas, arancinis al ragú, bastones de muzzarella, nugget de pollo, empanadas de carne fritas y papas fritas.</div>
 </div>
 
 </div>
 
 </section>
 
-</main>
 
+<!-- COCINA -->
 
-<!-- =========================
-     IMAGEN 4: PICADA
-========================= -->
+<section class="menu-page dark-page" id="cocina">
 
-<div class="single-photo">
+<div class="page-inner">
 
-<img
-src="menu/picada-fritos.png"
-alt="Picada y fritos FINO">
-
-</div>
-
-
-<main class="menu">
-
-
-<!-- =========================
-     COCINA
-========================= -->
-
-<section class="menu-section" id="cocina">
-
-<div class="section-heading">
+<div class="page-title">
+<small>05 — Cocina</small>
 <h2>Cocina</h2>
 </div>
 
-<div class="subheading">
-Minutas
-</div>
-
-<div class="subheading-note">
-Con guarnición
-</div>
-
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Suprema clásica</div><div class="item-price">$12.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Suprema a caballo</div><div class="item-price">$13.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Suprema napolitana</div><div class="item-price">$16.000</div></div></div>
+<div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Suprema FINO</div><div class="item-price">$16.000</div></div>
-<div class="item-desc">Cheddar y cebolla crispy</div>
+<div class="group-title">Minutas · Con guarnición</div>
+
+<div class="item"><div class="item-row"><span>SUPREMA CLÁSICA</span><span>$12.000</span></div></div>
+<div class="item"><div class="item-row"><span>SUPREMA A CABALLO</span><span>$13.000</span></div></div>
+<div class="item"><div class="item-row"><span>SUPREMA NAPOLITANA</span><span>$16.000</span></div></div>
+
+<div class="item">
+<div class="item-row"><span>SUPREMA FINO</span><span>$16.000</span></div>
+<div class="description">Cheddar y cebolla crispy</div>
 </div>
 
+
+<div class="group-title">Ensaladas</div>
+
+<div class="item">
+<div class="item-row"><span>CÉSAR</span><span>$10.900</span></div>
+<div class="description">Lechuga seleccionada, pollo frito, croutones y queso en hebras con alioli</div>
 </div>
 
-
-<div class="subheading">
-Ensaladas
+<div class="item">
+<div class="item-row"><span>MEDITERRÁNEA</span><span>$14.900</span></div>
+<div class="description">Rúcula, aceitunas negras, jamón crudo, queso en hebras y tomates confitados</div>
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">César</div><div class="item-price">$10.900</div></div>
-<div class="item-desc">
-Lechuga seleccionada, pollo frito, croutones
-y queso en hebras con alioli
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Mediterránea</div><div class="item-price">$14.900</div></div>
-<div class="item-desc">
-Rúcula, aceitunas negras, jamón crudo,
-queso en hebras y tomates confitados
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Completa</div><div class="item-price">$10.900</div></div>
-<div class="item-desc">
-Mix de verdes, cherrys confitados, huevo duro,
-zanahoria rallada, jamón y queso en tiras con alioli
-</div>
+<div class="item">
+<div class="item-row"><span>COMPLETA</span><span>$10.900</span></div>
+<div class="description">Mix de verdes, cherrys confitados, huevo duro, zanahoria rallada, jamón y queso en tiras con alioli</div>
 </div>
 
 </div>
 
 
-<div class="subheading">
-Entrepanes
+<div>
+
+<div class="group-title">Entrepanes</div>
+
+<div class="item">
+<div class="item-row"><span>PHILLY CHEESESTEAK</span><span>$14.900</span></div>
+<div class="description">Carne desmechada con cebolla en reducción de cerveza negra y cheddar. Acompañados de papas fritas</div>
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Philly Cheesesteak</div><div class="item-price">$14.900</div></div>
-<div class="item-desc">
-Carne desmechada con cebolla en reducción de cerveza negra
-y cheddar. Acompañado de papas fritas
-</div>
+<div class="item">
+<div class="item-row"><span>POLLO AL DISCO</span><span>$14.900</span></div>
+<div class="description">Pollo desmechado con pimientos, cebolla, zanahoria y puerro en reducción de vino blanco. Acompañados de papas fritas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Pollo al disco</div><div class="item-price">$14.900</div></div>
-<div class="item-desc">
-Pollo desmechado con pimientos, cebolla, zanahoria
-y puerro en reducción de vino blanco.
-Acompañado de papas fritas
-</div>
+<div class="item">
+<div class="item-row"><span>SUPREMO CLÁSICO</span><span>$12.000</span></div>
+<div class="description">Suprema de pollo, lechuga y tomate. Acompañados de papas fritas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Supremo clásico</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">
-Suprema de pollo, lechuga y tomate.
-Acompañado de papas fritas
-</div>
+<div class="item">
+<div class="item-row"><span>SUPREMO COMPLETO</span><span>$14.900</span></div>
+<div class="description">Suprema de pollo, jamón, queso, huevo, lechuga y tomate. Acompañados de papas fritas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Supremo completo</div><div class="item-price">$14.900</div></div>
-<div class="item-desc">
-Suprema de pollo, jamón, queso, huevo,
-lechuga y tomate. Acompañado de papas fritas
 </div>
+
 </div>
 
 </div>
@@ -1322,43 +799,33 @@ lechuga y tomate. Acompañado de papas fritas
 
 <!-- PIZZAS -->
 
-<section class="menu-section" id="pizzas">
+<section class="menu-page green-page" id="pizzas">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>06 — Pizzas y postres</small>
 <h2>Pizzas</h2>
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Muzzarella</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">
-Salsa de tomate, muzzarella, orégano y aceitunas
-</div>
+<div class="item">
+<div class="item-row"><span>MUZZARELLA</span><span>$12.000</span></div>
+<div class="description">Salsa de tomate, muzzarella, orégano y aceitunas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Napolitana</div><div class="item-price">$14.000</div></div>
-<div class="item-desc">
-Salsa de tomate, muzzarella, rodajas de tomate,
-provolone en hebras, orégano y aceitunas
-</div>
+<div class="item">
+<div class="item-row"><span>NAPOLITANA</span><span>$14.000</span></div>
+<div class="description">Salsa de tomate, muzzarella, rodajas de tomate, provolone en hebras, orégano y aceitunas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Especial con huevo</div><div class="item-price">$16.000</div></div>
-<div class="item-desc">
-Salsa de tomate, muzzarella, jamón,
-huevo, orégano y aceitunas
-</div>
+<div class="item">
+<div class="item-row"><span>ESPECIAL CON HUEVO</span><span>$16.000</span></div>
+<div class="description">Salsa de tomate, muzzarella, jamón, huevo, orégano y aceitunas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name highlight">Rúcula</div><div class="item-price">$18.000</div></div>
-<div class="item-desc">
-Salsa de tomate, muzzarella, jamón crudo,
-rúcula, provolone en hebras, orégano y aceitunas
-</div>
+<div class="item">
+<div class="item-row"><span class="highlight">RÚCULA</span><span>$18.000</span></div>
+<div class="description">Salsa de tomate, muzzarella, jamón crudo, rúcula, provolone en hebras, orégano y aceitunas</div>
 </div>
 
 </div>
@@ -1368,24 +835,27 @@ rúcula, provolone en hebras, orégano y aceitunas
 
 <!-- POSTRES -->
 
-<section class="menu-section" id="postres">
+<section class="menu-page" id="postres">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
 <h2>Postres</h2>
 </div>
 
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Chocotorta</div><div class="item-price">$6.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Cheesecake</div><div class="item-price">$7.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Tiramisú</div><div class="item-price">$7.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Helado</div><div class="item-price">$6.000</div></div></div>
+<div class="item"><div class="item-row"><span>CHOCOTORTA</span><span>$6.000</span></div></div>
+<div class="item"><div class="item-row"><span>HELADO</span><span>$6.000</span></div></div>
+<div class="item"><div class="item-row"><span>CHEESECAKE</span><span>$7.000</span></div></div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Affogato</div><div class="item-price">$6.000</div></div>
-<div class="item-desc">
-Helado de vainilla con espresso
+<div class="item">
+<div class="item-row"><span>AFFOGATO</span><span>$6.000</span></div>
+<div class="description">Helado de vainilla con espresso</div>
 </div>
+
+<div class="item"><div class="item-row"><span>TIRAMISÚ</span><span>$7.000</span></div></div>
+
 </div>
 
 </div>
@@ -1395,84 +865,79 @@ Helado de vainilla con espresso
 
 <!-- BEBIDAS -->
 
-<section class="menu-section" id="bebidas">
+<section class="menu-page dark-page" id="bebidas">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>07 — Refrescos y cervezas</small>
 <h2>Bebidas</h2>
 </div>
 
-<div class="subheading">
-Sin alcohol
-</div>
-
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Eco de los Andes</div><div class="item-price">$3.000</div></div>
-<div class="item-desc">Con o sin gas</div>
+<div>
+
+<div class="group-title">Sin alcohol</div>
+
+<div class="item">
+<div class="item-row"><span>ECO DE LOS ANDES</span><span>$3.000</span></div>
+<div class="description">Con o sin gas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Gaseosas</div><div class="item-price">$3.500</div></div>
-<div class="item-desc">Pepsi, Pepsi Black, 7up o Mirinda</div>
+<div class="item">
+<div class="item-row"><span>GASEOSAS</span><span>$3.500</span></div>
+<div class="description">Pepsi, Pepsi Black, 7up o Mirinda</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">H2O</div><div class="item-price">$3.500</div></div>
-<div class="item-desc">Limón, manzana, naranja o pomelo rosado</div>
+<div class="item">
+<div class="item-row"><span>H2O</span><span>$3.500</span></div>
+<div class="description">Limón, manzana, naranja o pomelo rosado</div>
 </div>
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Red Bull</div><div class="item-price">$4.000</div></div></div>
+<div class="item"><div class="item-row"><span>RED BULL</span><span>$4.000</span></div></div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Cerveza sin alcohol</div><div class="item-price">$6.000</div></div>
-<div class="item-desc">Corona 0.0 o Stella 0.0</div>
+<div class="item">
+<div class="item-row"><span>CERVEZA SIN ALCOHOL</span><span>$6.000</span></div>
+<div class="description">Corona 0.0 o Stella 0.0</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Limonada</div><div class="item-price">$4.000</div></div>
-<div class="item-desc">Con menta y jengibre</div>
+<div class="item">
+<div class="item-row"><span>LIMONADA</span><span>$4.000</span></div>
+<div class="description">Con menta y jengibre</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Jarra de limonada</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">Con menta y jengibre</div>
+<div class="item">
+<div class="item-row"><span>JARRA DE LIMONADA</span><span>$12.000</span></div>
+<div class="description">Con menta y jengibre</div>
 </div>
-
-</div>
-
-
-<div class="subheading">
-Cervezas
-</div>
-
-<div class="menu-grid">
-
-<div class="menu-item">
-<div class="item-top"><div class="item-name highlight">Chop artesanal</div><div class="item-price">$6.000</div></div>
-<div class="item-desc">Pale Ale, Scottish o IPA</div>
-</div>
-
-<div class="menu-item"><div class="item-top"><div class="item-name">Coronita</div><div class="item-price">$6.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Stella litro</div><div class="item-price">$12.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Balde Corona x4</div><div class="item-price">$20.000</div></div></div>
 
 </div>
 
 
-<div class="subheading">
-Jarras
+<div>
+
+<div class="group-title">Cervezas</div>
+
+<div class="item">
+<div class="item-row"><span class="highlight">CHOP ARTESANAL</span><span>$6.000</span></div>
+<div class="description">Pale Ale, Scottish o IPA</div>
 </div>
 
-<div class="subheading-note">
-1,6 lts
+<div class="item"><div class="item-row"><span>CORONITA</span><span>$6.000</span></div></div>
+<div class="item"><div class="item-row"><span>STELLA LITRO</span><span>$12.000</span></div></div>
+<div class="item"><div class="item-row"><span>BALDE CORONA X4</span><span>$20.000</span></div></div>
+
+
+<div class="group-title">Jarras · 1,6lts</div>
+
+<div class="item"><div class="item-row"><span>FERNET</span><span>$25.000</span></div></div>
+<div class="item"><div class="item-row"><span>MOJITO</span><span>$25.000</span></div></div>
+<div class="item"><div class="item-row"><span>SANGRÍA</span><span>$25.000</span></div></div>
+
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item"><div class="item-top"><div class="item-name">Fernet</div><div class="item-price">$25.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Mojito</div><div class="item-price">$25.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Sangría</div><div class="item-price">$25.000</div></div></div>
+</div>
 
 </div>
 
@@ -1481,66 +946,77 @@ Jarras
 
 <!-- COCKTAILS -->
 
-<section class="menu-section" id="cocktails">
+<section class="menu-page dark-page" id="cocktails">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>08 — Cocktails</small>
 <h2>Cocktails</h2>
 </div>
 
-<div class="subheading">
+<div class="group-title">
 Clásicos · $10.000
 </div>
 
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-name">Fernet Branca con Coca</div></div>
-<div class="menu-item"><div class="item-name">Vermut Carpano con soda o pomelo</div></div>
-<div class="menu-item"><div class="item-name">Cynar con pomelo</div></div>
-<div class="menu-item"><div class="item-name">Campari con naranja</div></div>
-<div class="menu-item"><div class="item-name">Aperol Spritz</div></div>
-<div class="menu-item"><div class="item-name">Mojito</div></div>
-<div class="menu-item"><div class="item-name">Daiquiri de frutilla</div></div>
-<div class="menu-item"><div class="item-name">Daiquiri de maracuyá</div></div>
-<div class="menu-item"><div class="item-name">Gin clásico</div></div>
-<div class="menu-item"><div class="item-name">Gin frutos rojos</div></div>
-<div class="menu-item"><div class="item-name">Gin Blueberry</div></div>
-<div class="menu-item"><div class="item-name">Margarita</div></div>
-<div class="menu-item"><div class="item-name">Margarita de maracuyá</div></div>
-<div class="menu-item"><div class="item-name">Caipiriña</div></div>
-<div class="menu-item"><div class="item-name">Caipiroska</div></div>
-<div class="menu-item"><div class="item-name">Vodka con jugo</div></div>
-<div class="menu-item"><div class="item-name">Vodka con Red Bull</div></div>
-<div class="menu-item"><div class="item-name">Sangría</div></div>
-<div class="menu-item"><div class="item-name">Mimosa</div></div>
-<div class="menu-item"><div class="item-name">Negroni</div></div>
-<div class="menu-item"><div class="item-name">Old Fashioned</div></div>
-<div class="menu-item"><div class="item-name">Martini</div></div>
-<div class="menu-item"><div class="item-name">Espresso Martini</div></div>
+<div>
+
+<div class="item">FERNET BRANCA CON COCA</div>
+<div class="item">VERMUT CARPANO CON SODA O POMELO</div>
+<div class="item">CYNAR CON POMELO</div>
+<div class="item">CAMPARI CON NARANJA</div>
+<div class="item">APEROL SPRITZ</div>
+<div class="item">MOJITO</div>
+<div class="item">DAIQUIRI DE FRUTILLA</div>
+<div class="item">DAIQUIRI DE MARACUYÁ</div>
+<div class="item">GIN CLÁSICO</div>
+<div class="item">GIN FRUTOS ROJOS</div>
+<div class="item">GIN BLUEBERRY</div>
+<div class="item">MARGARITA</div>
 
 </div>
 
+<div>
 
-<div class="subheading">
-De autor · $12.000
+<div class="item">MARGARITA DE MARACUYÁ</div>
+<div class="item">CAIPIRIÑA</div>
+<div class="item">CAIPIROSKA</div>
+<div class="item">VODKA CON JUGO</div>
+<div class="item">VODKA CON RED BULL</div>
+<div class="item">SANGRÍA</div>
+<div class="item">MIMOSA</div>
+<div class="item">NEGRONI</div>
+<div class="item">OLD FASHIONED</div>
+<div class="item">MARTINI</div>
+<div class="item">ESPRESSO MARTINI</div>
+
 </div>
+
+</div>
+
 
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-name">Caipijagger</div></div>
-<div class="menu-item"><div class="item-name">Trescientos Treinta y Tres</div></div>
-<div class="menu-item"><div class="item-name">Pinky Chill</div></div>
+<div>
+
+<div class="group-title">De autor · $12.000</div>
+<div class="item">CAIPIJAGGER</div>
+<div class="item">TRESCIENTOS TREINTA Y TRES</div>
+<div class="item">PINKY CHILL</div>
 
 </div>
 
+<div>
 
-<div class="subheading">
-Sin alcohol · $10.000
+<div class="group-title">Sin alcohol · $10.000</div>
+<div class="item">TÓNICO ROSA</div>
+<div class="item">PALMERA</div>
+
 </div>
 
-<div class="menu-grid">
-
-<div class="menu-item"><div class="item-name">Tónico Rosa</div></div>
-<div class="menu-item"><div class="item-name">Palmera</div></div>
+</div>
 
 </div>
 
@@ -1549,103 +1025,102 @@ Sin alcohol · $10.000
 
 <!-- DESTILADOS -->
 
-<section class="menu-section" id="destilados">
+<section class="menu-page dark-page" id="destilados">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>09 — Destilados</small>
 <h2>Destilados</h2>
 </div>
 
-<div class="subheading">
-Importados
-</div>
-
 <div class="menu-grid">
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Beefeater con tónica</div><div class="item-price">$15.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Hendrick's con tónica</div><div class="item-price">$20.000</div></div></div>
+<div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">Con Red Bull</div>
+<div class="group-title">Importados</div>
+
+<div class="item"><div class="item-row"><span>BEEFEATER CON TÓNICA</span><span>$15.000</span></div></div>
+<div class="item"><div class="item-row"><span>HENDRICK'S CON TÓNICA</span><span>$20.000</span></div></div>
+
+<div class="item">
+<div class="item-row"><span>JÄGERMEISTER</span><span>$12.000</span></div>
+<div class="description">Con Red Bull</div>
 </div>
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Mojito Malibú</div><div class="item-price">$10.000</div></div></div>
+<div class="item"><div class="item-row"><span>MOJITO MALIBÚ</span><span>$10.000</span></div></div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Absolut</div><div class="item-price">$12.000</div></div>
-<div class="item-desc">Con Red Bull</div>
+<div class="item">
+<div class="item-row"><span>ABSOLUT</span><span>$12.000</span></div>
+<div class="description">Con Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Cîroc</div><div class="item-price">$22.000</div></div>
-<div class="item-desc">Con Red Bull</div>
+<div class="item">
+<div class="item-row"><span>CÎROC</span><span>$22.000</span></div>
+<div class="description">Con Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Grey Goose</div><div class="item-price">$25.000</div></div>
-<div class="item-desc">Con Red Bull</div>
-</div>
-
-</div>
-
-
-<div class="subheading">
-Whiskies
-</div>
-
-<div class="menu-grid">
-
-<div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Red</div><div class="item-price">$10.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">The Famous Grouse</div><div class="item-price">$10.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Black</div><div class="item-price">$12.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Jim Beam</div><div class="item-price">$12.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Jack Daniels</div><div class="item-price">$14.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Chivas Regal 12</div><div class="item-price">$14.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Johnnie Walker Gold</div><div class="item-price">$20.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Macallan 12</div><div class="item-price">$35.000</div></div></div>
-
+<div class="item">
+<div class="item-row"><span>GREY GOOSE</span><span>$25.000</span></div>
+<div class="description">Con Red Bull</div>
 </div>
 
 
-<div class="subheading">
-Botellas
+<div class="group-title">Whiskies</div>
+
+<div class="item"><div class="item-row"><span>JOHNNIE WALKER RED</span><span>$10.000</span></div></div>
+<div class="item"><div class="item-row"><span>THE FAMOUS GROUSE</span><span>$10.000</span></div></div>
+<div class="item"><div class="item-row"><span>JOHNNIE WALKER BLACK</span><span>$12.000</span></div></div>
+<div class="item"><div class="item-row"><span>JIM BEAM</span><span>$12.000</span></div></div>
+<div class="item"><div class="item-row"><span>JACK DANIEL'S</span><span>$14.000</span></div></div>
+<div class="item"><div class="item-row"><span>CHIVAS REGAL 12</span><span>$14.000</span></div></div>
+<div class="item"><div class="item-row"><span>JOHNNIE WALKER GOLD</span><span>$20.000</span></div></div>
+<div class="item"><div class="item-row"><span>MACALLAN 12</span><span>$35.000</span></div></div>
+
 </div>
 
-<div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Fernet Branca</div><div class="item-price">$50.000</div></div>
-<div class="item-desc">Con una Coca</div>
+<div>
+
+<div class="group-title">Botellas</div>
+
+<div class="item">
+<div class="item-row"><span>FERNET BRANCA</span><span>$50.000</span></div>
+<div class="description">Con una Coca</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Gin Malandra</div><div class="item-price">$50.000</div></div>
-<div class="item-desc">Con una tónica y plato de frutas</div>
+<div class="item">
+<div class="item-row"><span>GIN MALANDRA</span><span>$50.000</span></div>
+<div class="description">Con una tónica y plato de frutas</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Vodka Malandra</div><div class="item-price">$40.000</div></div>
-<div class="item-desc">Con tres Red Bull</div>
+<div class="item">
+<div class="item-row"><span>VODKA MALANDRA</span><span>$40.000</span></div>
+<div class="description">Con tres Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Absolut</div><div class="item-price">$60.000</div></div>
-<div class="item-desc">Con tres Red Bull</div>
+<div class="item">
+<div class="item-row"><span>ABSOLUT</span><span>$60.000</span></div>
+<div class="description">Con tres Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">$70.000</div></div>
-<div class="item-desc">Con tres Red Bull</div>
+<div class="item">
+<div class="item-row"><span>JÄGERMEISTER</span><span>$70.000</span></div>
+<div class="description">Con tres Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Cîroc</div><div class="item-price">$100.000</div></div>
-<div class="item-desc">Con tres Red Bull</div>
+<div class="item">
+<div class="item-row"><span>CÎROC</span><span>$100.000</span></div>
+<div class="description">Con tres Red Bull</div>
 </div>
 
-<div class="menu-item">
-<div class="item-top"><div class="item-name">Grey Goose</div><div class="item-price">$120.000</div></div>
-<div class="item-desc">Con tres Red Bull</div>
+<div class="item">
+<div class="item-row"><span>GREY GOOSE</span><span>$120.000</span></div>
+<div class="description">Con tres Red Bull</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1655,141 +1130,96 @@ Botellas
 
 <!-- VINOS -->
 
-<section class="menu-section" id="vinos">
+<section class="menu-page dark-page" id="vinos">
 
-<div class="section-heading">
+<div class="page-inner">
+
+<div class="page-title">
+<small>10 — Vinos</small>
 <h2>Vinos</h2>
 </div>
 
-<div class="subheading">
-Por copa · Tinto o blanco
+<div style="text-align:right;margin-bottom:35px;">
+<div style="font-size:11px;color:#aaa;">
+POR COPA · TINTO O BLANCO
+</div>
+<div style="font-size:32px;color:#e84317;">
+$5.000
+</div>
 </div>
 
 <div class="menu-grid">
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Copa de vino</div>
-<div class="item-price">$5.000</div>
-</div>
-</div>
+<div>
+
+<div class="group-title">Tintos</div>
+
+<div class="item"><div class="item-row"><span>SANTA JULIA CABERNET FRANC</span><span>$15.000</span></div></div>
+<div class="item"><div class="item-row"><span>NORTON DOC. MALBEC</span><span>$20.000</span></div></div>
+<div class="item"><div class="item-row"><span>DV CATENA MALBEC</span><span>$25.000</span></div></div>
+<div class="item"><div class="item-row"><span>DV CATENA CABERNET</span><span>$25.000</span></div></div>
+
+
+<div class="group-title">Blancos</div>
+
+<div class="item"><div class="item-row"><span>ANAIA</span><span>$20.000</span></div></div>
+<div class="item"><div class="item-row"><span>NORTON LIBRE</span><span>$30.000</span></div></div>
+<div class="item"><div class="item-row"><span>NORTON ALTURA</span><span>$40.000</span></div></div>
 
 </div>
 
 
-<div class="subheading">
-Tintos
-</div>
+<div>
 
-<div class="menu-grid">
+<div class="group-title">Chardonnay</div>
 
-<div class="menu-item"><div class="item-top"><div class="item-name">Santa Julia Cabernet Franc</div><div class="item-price">$15.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Norton DOC. Malbec</div><div class="item-price">$20.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">DV Catena Malbec</div><div class="item-price">$25.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">DV Catena Cabernet</div><div class="item-price">$25.000</div></div></div>
+<div class="item"><div class="item-row"><span>ANDELUNA ALTITUD</span><span>$18.000</span></div></div>
+<div class="item"><div class="item-row"><span>TRAPICHE RESERVA</span><span>$18.000</span></div></div>
+<div class="item"><div class="item-row"><span>NORTON RESERVA</span><span>$25.000</span></div></div>
+<div class="item"><div class="item-row"><span class="highlight">HERMANDAD</span><span>$45.000</span></div></div>
 
 </div>
 
-
-<div class="subheading">
-Blancos
 </div>
-
-<div class="menu-grid">
-
-<div class="menu-item"><div class="item-top"><div class="item-name">Anaia</div><div class="item-price">$20.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Norton Libre</div><div class="item-price">$30.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Norton Altura</div><div class="item-price">$40.000</div></div></div>
-
-</div>
-
-
-<div class="subheading">
-Chardonnay
-</div>
-
-<div class="menu-grid">
-
-<div class="menu-item"><div class="item-top"><div class="item-name">Andeluna Altitud</div><div class="item-price">$18.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Trapiche Reserva</div><div class="item-price">$18.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Norton Reserva</div><div class="item-price">$25.000</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name highlight">Hermandad</div><div class="item-price">$45.000</div></div></div>
 
 </div>
 
 </section>
 
-</main>
 
-
-<!-- =========================
-     HAPPY HOUR
-========================= -->
+<!-- HAPPY HOUR -->
 
 <section class="happy" id="happy">
 
 <div class="happy-inner">
 
-<div class="eyebrow">
-De 17 a 22 h · Todos los días
+<div style="font-size:12px;font-weight:700;">
+DE 17 A 22 H, TODOS LOS DÍAS
 </div>
 
-<h2>
-Happy Hour
-</h2>
+<h2>HAPPY HOUR</h2>
 
-<div class="happy-item">
-<span>2 Pintas</span>
-<strong>$10.000</strong>
-</div>
-
-<div class="happy-item">
-<span>2 Gin Tonic</span>
-<strong>$15.000</strong>
-</div>
-
-<div class="happy-item">
-<span>2 Vermut Carpano</span>
-<strong>$15.000</strong>
-</div>
-
-<div class="happy-item">
-<span>2 Fernet</span>
-<strong>$15.000</strong>
-</div>
-
-<div class="happy-item">
-<span>Jarra de Sangría de verano</span>
-<strong>$20.000</strong>
-</div>
+<div class="happy-item"><span>2 PINTAS</span><span>$10.000</span></div>
+<div class="happy-item"><span>2 GIN TONIC</span><span>$15.000</span></div>
+<div class="happy-item"><span>2 VERMUT CARPANO</span><span>$15.000</span></div>
+<div class="happy-item"><span>2 FERNET</span><span>$15.000</span></div>
+<div class="happy-item"><span>JARRA DE SANGRÍA DE VERANO</span><span>$20.000</span></div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     IMAGEN 5: SANDWICH
-     ÚLTIMA IMAGEN
-========================= -->
+<!-- ÚLTIMA FOTO -->
 
 <section class="final">
 
-<div class="final-content">
-
-<div class="eyebrow">
-FINO
-</div>
+<div>
 
 <h2>
-Comida al centro.
-<br>
+Comida al centro.<br>
 <em>Amigos alrededor.</em>
 </h2>
-
-<p>
-Sarmiento 996 · Córdoba Capital
-</p>
 
 <a
 class="btn"
@@ -1809,4 +1239,5 @@ FINO · Un lugar de encuentro.
 
 
 </body>
+
 </html>
