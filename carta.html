@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>Carta | FINO</title>
 
   <meta
     name="description"
     content="Carta completa de FINO Bar Café · Domingo F. Sarmiento 996 · Córdoba Capital.">
+
 
   <style>
 
@@ -18,24 +24,37 @@
       --cream:#f5f1e8;
     }
 
+
     *{
       box-sizing:border-box;
       margin:0;
       padding:0;
     }
 
+
     html{
       scroll-behavior:smooth;
       background:var(--black);
     }
 
+
     body{
+
       margin:0;
+
       background:var(--black);
+
       color:var(--cream);
-      font-family:Arial,Helvetica,sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       overflow-x:hidden;
+
     }
+
 
     a{
       color:inherit;
@@ -43,9 +62,10 @@
     }
 
 
-    /* =========================
-       MENÚ SUPERIOR
-    ========================= */
+
+    /* =====================================
+       BARRA SUPERIOR
+    ===================================== */
 
     .top-nav{
 
@@ -71,10 +91,14 @@
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
 
-      border-bottom:1px solid rgba(255,255,255,.08);
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
 
     }
 
+
+
+    /* LOGO */
 
     .logo{
 
@@ -88,6 +112,9 @@
 
     }
 
+
+
+    /* LINKS */
 
     .nav-links{
 
@@ -108,6 +135,15 @@
 
       text-transform:uppercase;
 
+      transition:color .2s ease;
+
+    }
+
+
+    .nav-links a:hover{
+
+      color:var(--orange);
+
     }
 
 
@@ -119,9 +155,9 @@
 
 
 
-    /* =========================
-       CARTA
-    ========================= */
+    /* =====================================
+       CARTA COMPLETA
+    ===================================== */
 
     .menu{
 
@@ -134,17 +170,23 @@
     }
 
 
+
+    /* CADA PÁGINA DEL MENÚ */
+
     .menu-page{
 
       width:min(100%,794px);
 
       margin:0 auto;
 
+      padding:0;
+
       line-height:0;
 
       background:#000;
 
     }
+
 
 
     .menu-page img{
@@ -155,13 +197,17 @@
 
       height:auto;
 
+      margin:0;
+
+      padding:0;
+
     }
 
 
 
-    /* =========================
+    /* =====================================
        WHATSAPP
-    ========================= */
+    ===================================== */
 
     .whatsapp{
 
@@ -189,17 +235,19 @@
 
       font-weight:700;
 
-      box-shadow:0 8px 25px rgba(0,0,0,.35);
+      box-shadow:
+        0 8px 25px rgba(0,0,0,.35);
 
     }
 
 
 
-    /* =========================
+    /* =====================================
        CELULAR
-    ========================= */
+    ===================================== */
 
     @media(max-width:700px){
+
 
       .top-nav{
 
@@ -259,48 +307,63 @@
 
     }
 
+
   </style>
 
 </head>
 
 
+
 <body>
 
 
-  <!-- =========================
+
+  <!-- =====================================
        NAVEGACIÓN
-  ========================= -->
+  ====================================== -->
 
   <nav class="top-nav">
+
 
     <a
       class="logo"
       href="index.html">
+
       FINO
+
     </a>
+
 
 
     <div class="nav-links">
 
+
       <a href="index.html">
+
         Inicio
+
       </a>
+
 
       <a
         href="carta.html"
         class="active">
+
         Carta
+
       </a>
 
+
     </div>
+
 
   </nav>
 
 
 
-  <!-- =========================
+  <!-- =====================================
        WHATSAPP
-  ========================= -->
+  ====================================== -->
 
   <a
     class="whatsapp"
@@ -314,21 +377,24 @@
 
 
 
-  <!-- =========================
-       CARTA COMPLETA
-  ========================= -->
+  <!-- =====================================
+       CARTA FINO
+  ====================================== -->
 
   <main
     class="menu"
     aria-label="Carta completa de FINO">
 
 
-    <!-- 01 · PORTADA -->
+
+    <!-- =================================
+         01 · PORTADA
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/01-portada.png"
+        src="01-portada.png"
         alt="Portada del menú FINO"
         fetchpriority="high">
 
@@ -336,12 +402,15 @@
 
 
 
-    <!-- 02 · CAFETERÍA -->
+    <!-- =================================
+         02 · CAFETERÍA
+         Foto desayuno abajo
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/02-cafeteria.png"
+        src="02-cafeteria.png"
         alt="Cafetería FINO"
         loading="lazy">
 
@@ -349,12 +418,15 @@
 
 
 
-    <!-- 03 · CAFÉ -->
+    <!-- =================================
+         03 · CAFÉ
+         Foto croissant abajo
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/03-cafe.png"
+        src="03-cafe.png"
         alt="Café FINO"
         loading="lazy">
 
@@ -362,25 +434,31 @@
 
 
 
-    <!-- 04 · ENTRADAS -->
+    <!-- =================================
+         04 · ENTRADAS
+         Foto de papas
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/04-entradas.png"
-        alt="Entradas FINO"
+        src="04-entradas.png"
+        alt="Entradas y papas FINO"
         loading="lazy">
 
     </section>
 
 
 
-    <!-- 05 · LAS TABLAS -->
+    <!-- =================================
+         05 · LAS TABLAS
+         Foto de picada arriba
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/05-tablas.png"
+        src="05-tablas.png"
         alt="Las tablas FINO"
         loading="lazy">
 
@@ -388,12 +466,15 @@
 
 
 
-    <!-- 06 · COCINA -->
+    <!-- =================================
+         06 · COCINA
+         Foto sándwich con papas abajo
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/06-cocina.png"
+        src="06-cocina.png"
         alt="Cocina FINO"
         loading="lazy">
 
@@ -401,12 +482,14 @@
 
 
 
-    <!-- 07 · PIZZAS Y POSTRES -->
+    <!-- =================================
+         07 · PIZZAS Y POSTRES
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/07-pizzas-postres.png"
+        src="07-pizzas-postres.png"
         alt="Pizzas y postres FINO"
         loading="lazy">
 
@@ -414,25 +497,29 @@
 
 
 
-    <!-- 08 · BEBIDAS -->
+    <!-- =================================
+         08 · BEBIDAS
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/08-bebidas.png"
-        alt="Bebidas FINO"
+        src="08-bebidas.png"
+        alt="Bebidas, refrescos y cervezas FINO"
         loading="lazy">
 
     </section>
 
 
 
-    <!-- 09 · COCKTAILS -->
+    <!-- =================================
+         09 · COCKTAILS
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/09-cocktails.png"
+        src="09-cocktails.png"
         alt="Cocktails FINO"
         loading="lazy">
 
@@ -440,12 +527,14 @@
 
 
 
-    <!-- 10 · DESTILADOS -->
+    <!-- =================================
+         10 · DESTILADOS
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/10-destilados.png"
+        src="10-destilados.png"
         alt="Destilados FINO"
         loading="lazy">
 
@@ -453,12 +542,14 @@
 
 
 
-    <!-- 11 · VINOS -->
+    <!-- =================================
+         11 · VINOS
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/11-vinos.png"
+        src="11-vinos.png"
         alt="Vinos FINO"
         loading="lazy">
 
@@ -466,12 +557,14 @@
 
 
 
-    <!-- 12 · HAPPY HOUR -->
+    <!-- =================================
+         12 · HAPPY HOUR
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/12-happy-hour.png"
+        src="12-happy-hour.png"
         alt="Happy Hour FINO"
         loading="lazy">
 
@@ -479,20 +572,24 @@
 
 
 
-    <!-- 13 · FINAL -->
+    <!-- =================================
+         13 · FINAL / QR
+    ================================== -->
 
     <section class="menu-page">
 
       <img
-        src="menu/13-final-qr.png"
-        alt="FINO Bar Café · Instagram @finobarcafe"
+        src="13-final-qr.png"
+        alt="FINO Bar Café Instagram finobarcafe"
         loading="lazy">
 
     </section>
+
 
 
   </main>
 
 
 </body>
+
 </html>
