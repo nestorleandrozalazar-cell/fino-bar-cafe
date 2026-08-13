@@ -98,8 +98,6 @@
 
 
 
-    /* LOGO */
-
     .logo{
 
       color:var(--orange);
@@ -113,8 +111,6 @@
     }
 
 
-
-    /* LINKS */
 
     .nav-links{
 
@@ -156,6 +152,108 @@
 
 
     /* =====================================
+       SELECTOR DE CATEGORÍAS
+    ===================================== */
+
+    .category-nav{
+
+      position:fixed;
+
+      top:64px;
+      left:0;
+
+      width:100%;
+
+      z-index:999;
+
+      background:rgba(8,8,8,.97);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+    }
+
+
+    .category-inner{
+
+      width:100%;
+
+      display:flex;
+
+      align-items:center;
+
+      gap:9px;
+
+      overflow-x:auto;
+
+      padding:11px 5%;
+
+      scrollbar-width:none;
+
+      -webkit-overflow-scrolling:touch;
+
+    }
+
+
+    .category-inner::-webkit-scrollbar{
+
+      display:none;
+
+    }
+
+
+    .category-inner a{
+
+      flex:0 0 auto;
+
+      padding:8px 14px;
+
+      border:
+        1px solid rgba(255,255,255,.18);
+
+      border-radius:999px;
+
+      color:#d9d4cd;
+
+      font-size:11px;
+
+      letter-spacing:.06em;
+
+      text-transform:uppercase;
+
+      white-space:nowrap;
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+    }
+
+
+    .category-inner a:hover{
+
+      background:var(--orange);
+
+      border-color:var(--orange);
+
+      color:white;
+
+    }
+
+
+    .category-inner .inicio-carta{
+
+      color:var(--orange);
+
+      border-color:
+        rgba(232,67,23,.6);
+
+    }
+
+
+
+    /* =====================================
        CARTA COMPLETA
     ===================================== */
 
@@ -163,15 +261,13 @@
 
       width:100%;
 
-      padding-top:64px;
+      padding-top:113px;
 
       background:#000;
 
     }
 
 
-
-    /* CADA PÁGINA DEL MENÚ */
 
     .menu-page{
 
@@ -184,6 +280,8 @@
       line-height:0;
 
       background:#000;
+
+      scroll-margin-top:113px;
 
     }
 
@@ -279,9 +377,36 @@
       }
 
 
+      .category-nav{
+
+        top:58px;
+
+      }
+
+
+      .category-inner{
+
+        padding:
+          10px 12px;
+
+        gap:7px;
+
+      }
+
+
+      .category-inner a{
+
+        padding:
+          7px 12px;
+
+        font-size:10px;
+
+      }
+
+
       .menu{
 
-        padding-top:58px;
+        padding-top:105px;
 
       }
 
@@ -289,6 +414,8 @@
       .menu-page{
 
         width:100%;
+
+        scroll-margin-top:105px;
 
       }
 
@@ -319,7 +446,7 @@
 
 
   <!-- =====================================
-       NAVEGACIÓN
+       NAVEGACIÓN PRINCIPAL
   ====================================== -->
 
   <nav class="top-nav">
@@ -362,6 +489,111 @@
 
 
   <!-- =====================================
+       SELECTOR DE SECCIONES
+  ====================================== -->
+
+  <nav
+    class="category-nav"
+    aria-label="Secciones de la carta">
+
+
+    <div class="category-inner">
+
+
+      <a
+        class="inicio-carta"
+        href="#portada">
+
+        Inicio
+
+      </a>
+
+
+      <a href="#cafeteria">
+
+        Cafetería
+
+      </a>
+
+
+      <a href="#cafe">
+
+        Café
+
+      </a>
+
+
+      <a href="#entradas">
+
+        Entradas
+
+      </a>
+
+
+      <a href="#tablas">
+
+        Tablas
+
+      </a>
+
+
+      <a href="#cocina">
+
+        Cocina
+
+      </a>
+
+
+      <a href="#pizzas">
+
+        Pizzas
+
+      </a>
+
+
+      <a href="#bebidas">
+
+        Bebidas
+
+      </a>
+
+
+      <a href="#cocktails">
+
+        Cocktails
+
+      </a>
+
+
+      <a href="#destilados">
+
+        Destilados
+
+      </a>
+
+
+      <a href="#vinos">
+
+        Vinos
+
+      </a>
+
+
+      <a href="#happy-hour">
+
+        Happy Hour
+
+      </a>
+
+
+    </div>
+
+
+  </nav>
+
+
+
+  <!-- =====================================
        WHATSAPP
   ====================================== -->
 
@@ -387,11 +619,11 @@
 
 
 
-    <!-- =================================
-         01 · PORTADA
-    ================================== -->
+    <!-- 01 · PORTADA -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="portada">
 
       <img
         src="01-portada.png"
@@ -402,12 +634,11 @@
 
 
 
-    <!-- =================================
-         02 · CAFETERÍA
-         Foto desayuno abajo
-    ================================== -->
+    <!-- 02 · CAFETERÍA -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="cafeteria">
 
       <img
         src="02-cafeteria.png"
@@ -418,12 +649,11 @@
 
 
 
-    <!-- =================================
-         03 · CAFÉ
-         Foto croissant abajo
-    ================================== -->
+    <!-- 03 · CAFÉ -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="cafe">
 
       <img
         src="03-cafe.png"
@@ -434,12 +664,11 @@
 
 
 
-    <!-- =================================
-         04 · ENTRADAS
-         Foto de papas
-    ================================== -->
+    <!-- 04 · ENTRADAS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="entradas">
 
       <img
         src="04-entradas.png"
@@ -450,12 +679,11 @@
 
 
 
-    <!-- =================================
-         05 · LAS TABLAS
-         Foto de picada arriba
-    ================================== -->
+    <!-- 05 · LAS TABLAS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="tablas">
 
       <img
         src="05-tablas.png"
@@ -466,12 +694,11 @@
 
 
 
-    <!-- =================================
-         06 · COCINA
-         Foto sándwich con papas abajo
-    ================================== -->
+    <!-- 06 · COCINA -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="cocina">
 
       <img
         src="06-cocina.png"
@@ -482,11 +709,11 @@
 
 
 
-    <!-- =================================
-         07 · PIZZAS Y POSTRES
-    ================================== -->
+    <!-- 07 · PIZZAS Y POSTRES -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="pizzas">
 
       <img
         src="07-pizzas-postres.png"
@@ -497,11 +724,11 @@
 
 
 
-    <!-- =================================
-         08 · BEBIDAS
-    ================================== -->
+    <!-- 08 · BEBIDAS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="bebidas">
 
       <img
         src="08-bebidas.png"
@@ -512,11 +739,11 @@
 
 
 
-    <!-- =================================
-         09 · COCKTAILS
-    ================================== -->
+    <!-- 09 · COCKTAILS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="cocktails">
 
       <img
         src="09-cocktails.png"
@@ -527,11 +754,11 @@
 
 
 
-    <!-- =================================
-         10 · DESTILADOS
-    ================================== -->
+    <!-- 10 · DESTILADOS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="destilados">
 
       <img
         src="10-destilados.png"
@@ -542,11 +769,11 @@
 
 
 
-    <!-- =================================
-         11 · VINOS
-    ================================== -->
+    <!-- 11 · VINOS -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="vinos">
 
       <img
         src="11-vinos.png"
@@ -557,11 +784,11 @@
 
 
 
-    <!-- =================================
-         12 · HAPPY HOUR
-    ================================== -->
+    <!-- 12 · HAPPY HOUR -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="happy-hour">
 
       <img
         src="12-happy-hour.png"
@@ -572,11 +799,11 @@
 
 
 
-    <!-- =================================
-         13 · FINAL / QR
-    ================================== -->
+    <!-- 13 · FINAL / QR -->
 
-    <section class="menu-page">
+    <section
+      class="menu-page"
+      id="final">
 
       <img
         src="13-final-qr.png"
