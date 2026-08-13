@@ -322,11 +322,29 @@ footer{
 @media(max-width:850px){
 
   nav{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:20px;
+    padding:14px 5%;
+    overflow-x:auto;
+    white-space:nowrap;
+    background:rgba(0,0,0,.94);
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+
+  nav::-webkit-scrollbar{
     display:none;
   }
 
+  nav a{
+    flex:0 0 auto;
+    font-size:12px;
+  }
+
   .hero{
-    padding:100px 6% 60px;
+    padding:115px 6% 60px;
   }
 
   section{
